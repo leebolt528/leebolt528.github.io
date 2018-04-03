@@ -68,7 +68,8 @@ google_analytics: ''
 favicon: /img/favicon.ico
 cnzz_tongji:
      enable: true
-     siteid: 1273322392
+     siteid: '1273322392'
+
 #你的头像url
 avatar: /img/head.jpg
 

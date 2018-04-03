@@ -108,11 +108,15 @@ toc: true
 
 常用简写
     
-    $ hexo n == hexo new
-    $ hexo c == hexo clean
-    $ hexo g == hexo generate
-    $ hexo s == hexo server
-    $ hexo d == hexo deploy
+    $ hexo n == hexo new #生成文章
+    $ hexo c == hexo clean #清除缓存
+    $ hexo g == hexo generate #保存修改，生成文件
+    $ hexo s == hexo server #启动本地服务
+    $ hexo d == hexo deploy #发布到远程
+    $ hexo init #生成站点
+    $ hexo new page "xxx" #生成页面
+    $ npm install --save xxx  #安装插件
+    $ npm unstall xxx #卸载插件
 
 ## 添加主题
 ### 安装主题（yilia）
@@ -197,10 +201,42 @@ changyan_conf: c0d676145cb5b4242cedcdef8d2e97d6 #你在注册畅言中得到的A
 我们可以在blog的source下创建一个_drafts文件夹，用于保存不舍得删除的。但也不想在页面上显示的文章，或者比较私人的不想让其他人看到的文章。如果要强制预览，可以在blog目录下的.config.yml中强制开启。
 >render_drafts: false #强制预览修改为true
 ## 添加站长统计
-进入[cnzz](http://www.umeng.com/)进行注册和相应的设置后，在给出的代码中复制出id，把id填入到主题里的config.yml中对应的cnzz位置，如下
+进入[cnzz](http://www.umeng.com/)进行注册和相应的设置
+
+![cnzz账号注册](/img/blog/cnzz1.png)
+#### 方式一：（亲测无效）
+在给出的代码中复制出id，把id填入到主题里的config.yml中对应的cnzz位置，如下
 >cnzz_tongji:    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enable: true    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siteid: 1257040183 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siteid: 12733***** 
+#### 方式二
+![cnzz代码获取](/img/blog/cnzz2.png)
+
+获取自己喜欢的代码填入/blog/themes/yilia/layout/_partial/footer.ejs中的`</footer>`标签前。接着访问username.github.io就可以看到页面底部为下图所示：
+
+![cnzz查看分析](/img/blog/cnzz3.png)
+
+点击新出现的图标即可查看分析，可以如下图所示按需设置查看密码。
+
+![cnzz查看密码](/img/blog/cnzz4.png)
+## 添加百度统计分析
+进入[百度分析](https://tongji.baidu.com/web/25415468/welcome/login)进行注册和相应的设置
+
+![百度分析注册](/img/blog/baidu1.png)
+
+![百度分析注册](/img/blog/baidu2.png)
+
+![百度分析注册](/img/blog/baidu3.png)
+#### 方式一
+在给出的代码中复制出id，把id填入到主题里的config.yml中对应的cnzz位置，如下
+````
+# Miscellaneous
+baidu_analytics: '8678388163569xxxxxxxx'
+google_analytics: 'UA-9700xxxxxxxx'
+````
+#### 方式二
+直接把上述代码粘贴到/blog/themes/yilia/layout/_partial/head.ejs中的`</head>`标签前。接着就可以去该网站登陆自己的账号查看分析了。
+
 ## RSS订阅
 添加rss订阅，需要安装插件
 
@@ -233,3 +269,9 @@ changyan_conf: c0d676145cb5b4242cedcdef8d2e97d6 #你在注册畅言中得到的A
 ![网易云](/img/blog/music1.png)
 
 ![网易云](/img/blog/music2.png)
+## hexo引入视频
+```
+<iframe height="80%" width="80%" src="http://player.youku.com/embed/XMjUzMzY4OTM3Ng==" 
+	frameborder=0 allowfullscreen>
+</iframe>
+```
