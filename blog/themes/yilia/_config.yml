@@ -1,8 +1,8 @@
 ﻿# Header
 
 menu:
-  主页: /
-  #随笔: /tags/随笔/
+  博客: /
+  随笔: /essay
 
 # SubNav
 subnav:
@@ -45,11 +45,11 @@ open_in_new: false
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '谢谢你请我吃糖果'
+reward_wording: '谢谢你请我喝咖啡'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
-alipay: /img/alipay.png
+alipay: /img/public/alipay.png
 # 微信二维码图片地址
-weixin: /img/wechat.png
+weixin: /img/public/wechat.png
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
@@ -65,13 +65,13 @@ top: true
 # Miscellaneous
 baidu_analytics: '8678388163569c994a34c4a86608e4bb'
 google_analytics: ''
-favicon: /img/favicon.ico
+favicon: /img/public/favicon.ico
 cnzz_tongji:
      enable: true
      siteid: '1273322392'
 
 #你的头像url
-avatar: /img/head.jpg
+avatar: /img/public/head.jpg
 
 #是否开启分享
 share_jia: true
@@ -126,9 +126,8 @@ smart_menu:
   aboutme: '关于我'
 
 friends:
-  创客空间——环院工作室: http://zlfai.com/
-  Tinypng(在线图片压缩): https://tinypng.com/
+  Pexels-免费高品质图片网: https://www.pexels.com/
 
-aboutme: 李博<br>就读于太原理工大学<br><br>
+aboutme: 李博<br>趁年轻，我想来一次蹦极<br><br>
         爱健身,<br>爱生活,<br>爱自己<br><br>
         我这人不太懂音乐，<br>所以时而不靠谱，时而不着调.
