@@ -257,7 +257,7 @@ google_analytics: 'UA-9700xxxxxxxx'
 5.在本地http://username.github.io文件夹下通过Git bash依次执行安装Hexo和添加主题命令(此时当前分支应显示为hexo);    
 6.修改根目录下的_config.yml中的deploy参数，分支应为master;    
 7.依次执行git add .、git commit -m "..."、git fetch&&git rebase、git push origin hexo提交网站相关的文件;    
-8.执行hexo g -d生成网站并部署到GitHub上。
+8.进入blog目录下执行hexo g -d生成网站并部署到GitHub上。
 
 *blog中的子文件夹中.git需要删除，否则导致提交部署不成功*
 之后只需要每次在本地的blog文件下进行文章的增删改操作,完了提交到hexo分支上，再部署到远程master分支上即可。
