@@ -131,15 +131,16 @@ toc: true
 
     $ cd themes/yilia
     $ git pull
+    $ cd ../..
     $ hexo g
     $ hexo s
 
-现在打开http://localhost:4000，会看到我们已经应用了一个新的主题。
+现在打开[http://localhost:4000](http://localhost:4000),会看到我们已经应用了一个新的主题。
 # 4.使用Hexo deploy部署到github
-这一步恐怕是最关键的一步了，让我们把在本地web环境下预览到的博客部署到github上，然后就可以直接通过http://username.github.io（http://leebolt528.github.io）访问了。不过很多教程文章对这个步骤语焉不详，这里着重说下
+这一步恐怕是最关键的一步了，让我们把在本地web环境下预览到的博客部署到github上，然后就可以直接通过[http://username.github.io](http://leebolt528.github.io)访问了。不过很多教程文章对这个步骤语焉不详，这里着重说下
 ### 首先需要明白所谓部署到github的原理
 1. 之前步骤中在Github上创建的那个特别的repo(leebolt528.github.io)一个最大的特点就是其master中的html静态文件，可以通过链接 http://leebolt528.github.io 来直接访问。
-2. hexo -g 会生成一个静态网站(第一次会生成一个public目录),这个静态文件可以直接访问。
+2. hexo g 会生成一个静态网站(第一次会生成一个public目录),这个静态文件可以直接访问。
 3. 需要将hexo生成的静态网站提交到github上.
 
 ### 使用hexo deploy部署
@@ -162,7 +163,7 @@ toc: true
     git clone https://github.com/wuchong/jacman.git themes/jacman
 ```
 2. 修改全局config.yml中的theme,theme:yilia 把yilia改为pacman.
-3. 然后进行主题更新以及部署(最后上传到github)。
+3. 然后进行主题更新以及部署(最后上传到github).
 ```
     cd themes/jacman
     git pull
@@ -255,7 +256,7 @@ google_analytics: 'UA-9700xxxxxxxx'
 4.使用git clone git@github.com:username.github.io.git拷贝仓库;    
 5.在本地http://username.github.io文件夹下通过Git bash依次执行安装Hexo和添加主题命令(此时当前分支应显示为hexo);    
 6.修改根目录下的_config.yml中的deploy参数，分支应为master;    
-7.依次执行git add .、git commit -m "..."、git push origin hexo提交网站相关的文件;    
+7.依次执行git add .、git commit -m "..."、git fetch&&git rebase、git push origin hexo提交网站相关的文件;    
 8.执行hexo g -d生成网站并部署到GitHub上。
 
 *blog中的子文件夹中.git需要删除，否则导致提交部署不成功*
