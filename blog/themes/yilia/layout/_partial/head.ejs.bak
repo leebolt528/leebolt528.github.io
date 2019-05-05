@@ -40,4 +40,15 @@
   </style>
   <%- partial('google-analytics') %>
   <%- partial('baidu-analytics') %>
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?8678388163569c994a34c4a86608e4bb";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+   </script>
+   <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=40729223&auto=1&height=66"></iframe>
+
 </head>

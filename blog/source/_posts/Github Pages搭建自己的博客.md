@@ -4,6 +4,11 @@ tags:  ["hexo","blog"]
 comments: true
 toc: true
 ---
+<video id="video" controls="controls"   preload="preload" poster="\img\public\head.jpg">
+    <source id="mp4" src="\img\public\WeChat_20190504234619.mp4" type="video/mp4">
+    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg">
+</video>
 # 1.前言
 由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。
 <!-- more -->
@@ -78,7 +83,6 @@ toc: true
 
     $ ssh-keygen -t rsa -C "youremail@example.com"
 你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。
-
 如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 
 第2步：登陆[GitHub](https://github.com/)，打开“settings”，“SSH and GPG keys”页面：
@@ -261,6 +265,8 @@ google_analytics: 'UA-9700xxxxxxxx'
 
 *blog中的子文件夹中.git需要删除，否则导致提交部署不成功*
 之后只需要每次在本地的blog文件下进行文章的增删改操作,完了提交到hexo分支上，再部署到远程master分支上即可。
+## hexo引入图片
+>可以选择储存图片到目录文件夹下，也可以使用[图床](https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin)。
 ## hexo yilia 引入音乐
 ```
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="填写音乐链接地址"></iframe>
@@ -275,4 +281,10 @@ google_analytics: 'UA-9700xxxxxxxx'
 <iframe height="80%" width="80%" src="http://player.youku.com/embed/XMjUzMzY4OTM3Ng==" 
 	frameborder=0 allowfullscreen>
 </iframe>
+or
+<video id="video" controls="controls"   preload="preload" poster="http://media.w3.org/2010/05/sintel/poster.png">
+    <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg">
+</video>
 ```

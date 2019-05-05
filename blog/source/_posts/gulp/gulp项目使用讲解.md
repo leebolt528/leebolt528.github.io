@@ -3,6 +3,8 @@ title: gulp项目使用讲解
 tags: ["tools","gulp"]
 toc: true
 ---
+<iframe frameborder="no" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32009001&auto=1&height=66"></iframe>
+<span>see you again</span>
 # 引言
 在工作中经常会有对静态资源合并和压缩的操作。[gulp](https://www.gulpjs.com.cn/)是基于Nodejs在前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的流操作，能更快地更便捷地完成构建工作。
 <!--more-->
