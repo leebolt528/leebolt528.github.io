@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cczeng.github.io">
-  <title>Tag: tools | LeeBolt的博客</title>
+  <title>gulp项目使用讲解 | LeeBolt的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LeeBolt的博客">
-<meta property="og:url" content="https://cczeng.github.io/tags/tools/index.html">
+  <meta name="description" content="see you again 引言在工作中经常会有对静态资源合并和压缩的操作。gulp是基于Nodejs在前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。gulp 和 grun">
+<meta name="keywords" content="tools,gulp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gulp项目使用讲解">
+<meta property="og:url" content="https://cczeng.github.io/2019/05/05/gulp/gulp项目使用讲解/index.html">
 <meta property="og:site_name" content="LeeBolt的博客">
+<meta property="og:description" content="see you again 引言在工作中经常会有对静态资源合并和压缩的操作。gulp是基于Nodejs在前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。gulp 和 grun">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://cczeng.github.io/img/gulp/gulp.png">
+<meta property="og:updated_time" content="2019-05-05T12:52:03.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeeBolt的博客">
+<meta name="twitter:title" content="gulp项目使用讲解">
+<meta name="twitter:description" content="see you again 引言在工作中经常会有对静态资源合并和压缩的操作。gulp是基于Nodejs在前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。gulp 和 grun">
+<meta name="twitter:image" content="https://cczeng.github.io/img/gulp/gulp.png">
   
   
     <link rel="icon" href="/img/public/favicon.ico">
@@ -171,36 +178,111 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-gulp/gulp项目使用讲解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/05/gulp/gulp项目使用讲解/" class="archive-article-date">
-  	<time datetime="2019-05-05T12:52:03.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/05/gulp/gulp项目使用讲解/">gulp项目使用讲解</a>
+    <h1 class="article-title" itemprop="name">
+      gulp项目使用讲解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/05/gulp/gulp项目使用讲解/" class="archive-article-date">
+  	<time datetime="2019-05-05T12:52:03.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+	
+	    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+		  <span class="btn-bg"></span>
+		  <span class="btn-text">文章导航</span>
+		  </p>
+		<div id="toc-article" class="toc-article">
+		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">文章目录</strong>
+		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装node-js"><span class="toc-number">2.1.</span> <span class="toc-text">安装node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Gulp环境"><span class="toc-number">2.2.</span> <span class="toc-text">安装Gulp环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目中使用Glup"><span class="toc-number">2.3.</span> <span class="toc-text">项目中使用Glup</span></a></li></ol></li></ol>
+		 </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
+	      
+	<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><iframe frameborder="no" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=32009001&auto=1&height=66"></iframe><br><span>see you again</span></p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在工作中经常会有对静态资源合并和压缩的操作。<a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">gulp</a>是基于Nodejs在前端开发过程中对代码进行构建的工具，是自动化项目的构建利器，她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的流操作，能更快地更便捷地完成构建工作。<br><a id="more"></a></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>由于gulp使用基于node，所以首先要安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node环境</a>。</p>
+<h2 id="安装Gulp环境"><a href="#安装Gulp环境" class="headerlink" title="安装Gulp环境"></a>安装Gulp环境</h2><pre><code>$ npm install gulp -g
+</code></pre><h2 id="项目中使用Glup"><a href="#项目中使用Glup" class="headerlink" title="项目中使用Glup"></a>项目中使用Glup</h2><ol>
+<li>在项目根目录下写命令行 初始化：<code>npm init</code> , 此时根目录会出现package.json.</li>
+<li><p>进入项目的适当位置（一般为根本目录或前端代码的最上层），运行安装本地Gulp环境，运行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp --save-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装css,js压缩的环境，运行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp-uglify --save-dev #局部安装gulp-uglify(压缩JavaScript)</span><br><span class="line">$ npm install gulp-clean-css --save-dev #局部安装gulp-clean-css(压缩css,或使用gulp-minify-css)</span><br><span class="line">$ npm install gulp-concat --save-dev #局部安装gulp-concat(合并文件)</span><br><span class="line">$ npm install gulp-rename --save-dev #局部安装gulp-rename(重命名)</span><br><span class="line">$ npm install del --save-del #局部安装del(文件删除)</span><br><span class="line">$ npm install gulp-uncss --save-dev #局部安装gulp-uncs(删除css冗余代码)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>package.json 同级目录创建gulpfile.js,配置信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    uglify = require(&apos;gulp-uglify&apos;),</span><br><span class="line">    cleancss = require(&apos;gulp-clean-css&apos;),</span><br><span class="line">    rename = require(&apos;gulp-rename&apos;),</span><br><span class="line">    del = require(&apos;del&apos;),</span><br><span class="line">    concat = require(&apos;gulp-concat&apos;),</span><br><span class="line">    uncss = require(&apos;gulp-uncss&apos;);</span><br><span class="line">#合并压缩js</span><br><span class="line">gulp.task(&apos;jsmin&apos;, [&quot;clean&quot;],function () &#123;</span><br><span class="line">    gulp.src([&apos;WebContent/js/search/*.js&apos;]) #多个文件以数组形式传入</span><br><span class="line">    .pipe(concat(&apos;search.js&apos;)) #把search下的js合并为search.js</span><br><span class="line">    .pipe(gulp.dest(&apos;WebContentSrc/js&apos;)) #把合并后的search.js输出到WebContentSrc下</span><br><span class="line">    .pipe(uglify()) #压缩search.js</span><br><span class="line">    .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;)) #压缩文件命名search.min.js</span><br><span class="line">    .pipe(gulp.dest(&apos;WebContentSrc/js&apos;)); #把压缩文件search.min.js输出到WebContentSrc下</span><br><span class="line">&#125;);</span><br><span class="line">#单个压缩css</span><br><span class="line">gulp.task(&apos;cssmin&apos;,[&quot;clean&quot;], function () &#123;</span><br><span class="line">      gulp.src([&apos;WebContent/css/**/*.css&apos;])</span><br><span class="line">     .pipe(gulp.dest(&apos;WebContentSrc/css&apos;)) </span><br><span class="line">     .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))   </span><br><span class="line">     .pipe(cleancss())</span><br><span class="line">     .pipe(gulp.dest(&apos;WebContentSrc/css&apos;));</span><br><span class="line">&#125;);</span><br><span class="line">#删除冗余css代码</span><br><span class="line">gulp.task(&apos;uncssout&apos;, function() &#123;</span><br><span class="line">    gulp.src([&apos;WebContent/css/**/*.css&apos;]) </span><br><span class="line">    .pipe(uncss(&#123;</span><br><span class="line">        #使用css的html页面，可多个</span><br><span class="line">        html: [&apos;WebContent/views/*.html&apos;,&apos;WebContent/views/**/*.html&apos;,&apos;WebContent/views/**/**/*.html&apos;]</span><br><span class="line">    &#125;))</span><br><span class="line">   #输出目录</span><br><span class="line">   .pipe(gulp.dest(&apos;WebContent/css&apos;));</span><br><span class="line">&#125;);</span><br><span class="line">#执行压缩前，先删除以前压缩的文件</span><br><span class="line">gulp.task(&apos;clean&apos;, function() &#123;</span><br><span class="line">      return del([&apos;WebContentSrc/css&apos;, &apos;WebContentSrc/js&apos;])</span><br><span class="line">&#125;);</span><br><span class="line">#默认任务</span><br><span class="line">gulp.task(&apos;default&apos;, function()&#123;</span><br><span class="line">      gulp.run(&apos;uncssout&apos;,&apos;jsmin&apos;, &apos;cssmin&apos;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接运行gulp命令。</p>
+</li>
+</ol>
+<p><img src="/img/gulp/gulp.png" alt="gulp命令项目目录"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我喝咖啡<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/public/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/public/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -216,19 +298,128 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/05/gulp/gulp项目使用讲解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/05/06/plugin/menuLeft/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          左侧三级导航菜单组件
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/05/05/Github Pages搭建自己的博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Hexo + Github Pages搭建个人独立博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装node-js"><span class="toc-number">2.1.</span> <span class="toc-text">安装node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Gulp环境"><span class="toc-number">2.2.</span> <span class="toc-text">安装Gulp环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目中使用Glup"><span class="toc-number">2.3.</span> <span class="toc-text">项目中使用Glup</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -252,9 +443,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,

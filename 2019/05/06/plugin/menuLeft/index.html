@@ -6,39 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cczeng.github.io">
-  <title>使用Hexo + Github Pages搭建个人独立博客 | LeeBolt的博客</title>
+  <title>左侧三级导航菜单组件 | LeeBolt的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.前言由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。">
-<meta name="keywords" content="hexo,blog">
+  <meta name="description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
+<meta name="keywords" content="menu,plugin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo + Github Pages搭建个人独立博客">
-<meta property="og:url" content="https://cczeng.github.io/2019/05/04/Github Pages搭建自己的博客/index.html">
+<meta property="og:title" content="左侧三级导航菜单组件">
+<meta property="og:url" content="https://cczeng.github.io/2019/05/06/plugin/menuLeft/index.html">
 <meta property="og:site_name" content="LeeBolt的博客">
-<meta property="og:description" content="1.前言由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。">
+<meta property="og:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/create1.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/create2.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/create3.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/create4.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/key.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/changyan.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/tags.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/more.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/cnzz1.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/cnzz2.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/cnzz3.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/cnzz4.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/baidu1.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/baidu2.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/baidu3.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/branch.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/music1.png">
-<meta property="og:image" content="https://cczeng.github.io/img/blog/music2.png">
-<meta property="og:updated_time" content="2019-05-05T12:44:24.507Z">
+<meta property="og:updated_time" content="2019-05-06T15:46:31.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo + Github Pages搭建个人独立博客">
-<meta name="twitter:description" content="1.前言由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。">
-<meta name="twitter:image" content="https://cczeng.github.io/img/blog/create1.png">
+<meta name="twitter:title" content="左侧三级导航菜单组件">
+<meta name="twitter:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
   
   
     <link rel="icon" href="/img/public/favicon.ico">
@@ -195,20 +176,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Github Pages搭建自己的博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-plugin/menuLeft" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用Hexo + Github Pages搭建个人独立博客
+      左侧三级导航菜单组件
     </h1>
   
 
         
-        <a href="/2019/05/04/Github Pages搭建自己的博客/" class="archive-article-date">
-  	<time datetime="2019-05-04T03:43:13.979Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+        <a href="/2019/05/06/plugin/menuLeft/" class="archive-article-date">
+  	<time datetime="2019-05-06T13:51:07.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
 </a>
         
       </header>
@@ -222,7 +203,7 @@ var _hmt = _hmt || [];
 		<div id="toc-article" class="toc-article">
 		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-number">1.</span> <span class="toc-text">1.前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#那么我为什么要建立自己的博客？"><span class="toc-number">1.1.</span> <span class="toc-text">那么我为什么要建立自己的博客？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-提高将事情讲清楚的能力"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.提高将事情讲清楚的能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-培养持续做一件事的能力"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.培养持续做一件事的能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-积累更多的知识"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.积累更多的知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-分享带来的连锁反应"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.分享带来的连锁反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-记录成长"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.记录成长</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-开始搭建Github-Pages"><span class="toc-number">2.</span> <span class="toc-text">2.开始搭建Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用前了解Github"><span class="toc-number">2.1.</span> <span class="toc-text">1.使用前了解Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-为什么选择Github"><span class="toc-number">2.2.</span> <span class="toc-text">2.为什么选择Github?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-注册github账号"><span class="toc-number">2.3.</span> <span class="toc-text">3.注册github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-创建仓库"><span class="toc-number">2.4.</span> <span class="toc-text">4.创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-开启Github-Pages"><span class="toc-number">2.5.</span> <span class="toc-text">5.开启Github Pages</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-hexo系统环境配置"><span class="toc-number">3.</span> <span class="toc-text">3.hexo系统环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Node-js"><span class="toc-number">3.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-number">3.2.</span> <span class="toc-text">安装Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自报家门"><span class="toc-number">3.2.1.</span> <span class="toc-text">自报家门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加SSH-Key到Github"><span class="toc-number">3.2.2.</span> <span class="toc-text">添加SSH Key到Github</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">3.3.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加主题"><span class="toc-number">3.4.</span> <span class="toc-text">添加主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题（yilia）"><span class="toc-number">3.4.1.</span> <span class="toc-text">安装主题（yilia）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启用主题"><span class="toc-number">3.4.2.</span> <span class="toc-text">启用主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跟新主题"><span class="toc-number">3.4.3.</span> <span class="toc-text">跟新主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用Hexo-deploy部署到github"><span class="toc-number">4.</span> <span class="toc-text">4.使用Hexo deploy部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先需要明白所谓部署到github的原理"><span class="toc-number">4.0.1.</span> <span class="toc-text">首先需要明白所谓部署到github的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo-deploy部署"><span class="toc-number">4.0.2.</span> <span class="toc-text">使用hexo deploy部署</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#5-关于hexo搭建博客后的一些基础配置"><span class="toc-number">5.</span> <span class="toc-text">5.关于hexo搭建博客后的一些基础配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改主题"><span class="toc-number">5.1.</span> <span class="toc-text">修改主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用畅言评论"><span class="toc-number">5.2.</span> <span class="toc-text">使用畅言评论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方式一"><span class="toc-number">5.2.1.</span> <span class="toc-text">方式一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方式二"><span class="toc-number">5.2.2.</span> <span class="toc-text">方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-文章目录"><span class="toc-number">5.3.</span> <span class="toc-text">hexo yilia 文章目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yilia标签分类"><span class="toc-number">5.4.</span> <span class="toc-text">yilia标签分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-设置文章显示长度，不展开全文"><span class="toc-number">5.5.</span> <span class="toc-text">hexo yilia 设置文章显示长度，不展开全文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-怎么写文章"><span class="toc-number">5.6.</span> <span class="toc-text">hexo yilia 怎么写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不知道如何编写Markdown语法"><span class="toc-number">5.7.</span> <span class="toc-text">不知道如何编写Markdown语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#草稿（私密文章）"><span class="toc-number">5.8.</span> <span class="toc-text">草稿（私密文章）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站长统计"><span class="toc-number">5.9.</span> <span class="toc-text">添加站长统计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方式一：（亲测无效）"><span class="toc-number">5.9.0.1.</span> <span class="toc-text">方式一：（亲测无效）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方式二-1"><span class="toc-number">5.9.0.2.</span> <span class="toc-text">方式二</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加百度统计分析"><span class="toc-number">5.10.</span> <span class="toc-text">添加百度统计分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方式一-1"><span class="toc-number">5.10.0.1.</span> <span class="toc-text">方式一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方式二-2"><span class="toc-number">5.10.0.2.</span> <span class="toc-text">方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS订阅"><span class="toc-number">5.11.</span> <span class="toc-text">RSS订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电脑重装了系统-多台电脑写博客？"><span class="toc-number">5.12.</span> <span class="toc-text">电脑重装了系统/多台电脑写博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo引入图片"><span class="toc-number">5.13.</span> <span class="toc-text">hexo引入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-引入音乐"><span class="toc-number">5.14.</span> <span class="toc-text">hexo yilia 引入音乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo引入视频"><span class="toc-number">5.15.</span> <span class="toc-text">hexo引入视频</span></a></li>
+		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据格式"><span class="toc-number">4.4.</span> <span class="toc-text">数据格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
 		 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -242,181 +223,147 @@ var _hmt = _hmt || [];
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\img\public\WeChat_20190504234619.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video></p>
-<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。<br><a id="more"></a></p>
-<h2 id="那么我为什么要建立自己的博客？"><a href="#那么我为什么要建立自己的博客？" class="headerlink" title="那么我为什么要建立自己的博客？"></a>那么我为什么要建立自己的博客？</h2><h3 id="1-提高将事情讲清楚的能力"><a href="#1-提高将事情讲清楚的能力" class="headerlink" title="1.提高将事情讲清楚的能力"></a>1.提高将事情讲清楚的能力</h3><blockquote>
-<p>将一件事情写下来，可以锻炼一个人的思维逻辑能力和提高表达分析能力，写会迫使你在你脑中搭建一个条理的框架。</p>
-<blockquote>
-<p>如果一件事你没有讲清楚，十有八九是你还没有理解清楚。</p>
-</blockquote>
-</blockquote>
-<h3 id="2-培养持续做一件事的能力"><a href="#2-培养持续做一件事的能力" class="headerlink" title="2.培养持续做一件事的能力"></a>2.培养持续做一件事的能力</h3><blockquote>
-<p>我大三曾经坚持健身一年，健身带来了我们所求所想的好；我想看书让自己的心静下来，可我怕买回来不看没勇气去买；但我从现在开始必须要坚持写博客，默默地持续做一件事是一种难得的能力，也是一种难得的品质,将会提供一股持续学习的动力。</p>
-<blockquote>
-<p>开始是坚持，后来是习惯，接着是喜欢。</p>
-</blockquote>
-</blockquote>
-<h3 id="3-积累更多的知识"><a href="#3-积累更多的知识" class="headerlink" title="3.积累更多的知识"></a>3.积累更多的知识</h3><blockquote>
-<p>之前总是断断续续地学习一些东西，等到真正使用时突然发现还得从头开始查阅学习，这样方式严重阻碍的个人的提升。因此我觉得我有必要记录自己曾经学习的知识，构建自己的学习体系。</p>
-<blockquote>
-<p>写并不是单纯的写。</p>
-</blockquote>
-</blockquote>
-<h3 id="4-分享带来的连锁反应"><a href="#4-分享带来的连锁反应" class="headerlink" title="4.分享带来的连锁反应"></a>4.分享带来的连锁反应</h3><blockquote>
-<p>正如大家的学习主要依赖于网络其他朋友的分享，想我这次的搭建博客完全是依赖于他人的分享。</p>
-<blockquote>
-<p>互联网给你的反馈就是让你承受更多，接受更多，成为一个更好的人。</p>
-</blockquote>
-</blockquote>
-<h3 id="5-记录成长"><a href="#5-记录成长" class="headerlink" title="5.记录成长"></a>5.记录成长</h3><blockquote>
-<p>回首自己写的博客，你将会发现自己正在通过这种方式不断的成长，这种成长在自己眼里是一笔财富，在别人眼里是一张地图，你得到的收获不断修正自己的错误，别人得到指引避免走弯路。</p>
-<blockquote>
-<p>So what,that is what I am!</p>
-</blockquote>
-</blockquote>
-<h1 id="2-开始搭建Github-Pages"><a href="#2-开始搭建Github-Pages" class="headerlink" title="2.开始搭建Github Pages"></a>2.开始搭建Github Pages</h1><h2 id="1-使用前了解Github"><a href="#1-使用前了解Github" class="headerlink" title="1.使用前了解Github"></a>1.使用前了解Github</h2><blockquote>
-<p>GitHub是一个共享虚拟主机服务，用于存放使用Git版本控制的软件代码和内容项目(引自维基百科）</p>
-</blockquote>
-<h2 id="2-为什么选择Github"><a href="#2-为什么选择Github" class="headerlink" title="2.为什么选择Github?"></a>2.为什么选择Github?</h2><blockquote>
-<p>github有一个很有爱的项目，叫做GitHub Pages,这个是给开发者建立的一个私人页面，上面用来分享新颖的想法和自己写的代码。而且最主要的是，这个是免费而且没有空间流量限制的。这也就是我为什么放弃了自由度很高的，却需要支付高昂的主机费的wordpress，而转投了github pages阵营。</p>
-</blockquote>
-<h2 id="3-注册github账号"><a href="#3-注册github账号" class="headerlink" title="3.注册github账号"></a>3.注册github账号</h2><p><a href="https://github.com/" target="_blank" rel="noopener">点击进行注册</a>(此处不做详细说明可自行阅读<a href="http://jingyan.baidu.com/article/455a9950abe0ada167277864.html" target="_blank" rel="noopener">github教程：[1]注册github</a>)</p>
-<p>注册完毕后你就拥有了自己的代码仓库。</p>
-<h2 id="4-创建仓库"><a href="#4-创建仓库" class="headerlink" title="4.创建仓库"></a>4.创建仓库</h2><p>点击Github右上角加号选择New repositor(新存储库)或<a href="https://github.com/new" target="_blank" rel="noopener">点击这里</a>进行创建一个仓库。</p>
-<p><img src="\img\blog\create1.png" alt="创建一个仓库"></p>
-<h2 id="5-开启Github-Pages"><a href="#5-开启Github-Pages" class="headerlink" title="5.开启Github Pages"></a>5.开启Github Pages</h2><p>进入设置</p>
-<p><img src="/img/blog/create2.png" alt="设置"></p>
-<p>找到这一块</p>
-<p><img src="/img/blog/create3.png" alt="设置"> </p>
-<p>当你的仓库名为：用户名.github.io 之后默认开启Github Pages</p>
-<p>现在随便选择一个主题,选择上图的 Choose a theme 之后会跳转到下面这个页面</p>
-<p><img src="/img/blog/create4.png" alt="选择主题"> </p>
-<p>设置完毕后你就可以通过 username.github.io(username为你的用户名访问你的博客了)</p>
-<h1 id="3-hexo系统环境配置"><a href="#3-hexo系统环境配置" class="headerlink" title="3.hexo系统环境配置"></a>3.hexo系统环境配置</h1><p>要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载Node.js</a><br>参考:<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">安装Node.js</a>  </p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰Git安装使用教程</a></p>
-<p><a href="https://git-scm.com/download/" target="_blank" rel="noopener">下载Git</a><br>一路点击Next就行了.</p>
-<h3 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h3><pre><code>$ git config --global user.name &quot;Your Name&quot;
-$ git config --global user.email &quot;email@example.com&quot;
-</code></pre><p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。你也许会担心，如果有人故意冒充别人怎么办？这个不必担心，首先我们相信大家都是善良无知的群众，其次，真的有冒充的也是有办法可查的。</p>
-<p>注意git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址</p>
-<p>由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：</p>
-<h3 id="添加SSH-Key到Github"><a href="#添加SSH-Key到Github" class="headerlink" title="添加SSH Key到Github"></a>添加SSH Key到Github</h3><p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
-</code></pre><p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。<br>如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</p>
-<p>第2步：登陆<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>，打开“settings”，“SSH and GPG keys”页面：</p>
-<p>然后，点“New GPG key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：</p>
-<p><img src="/img/blog/key.png" alt="添加公钥"></p>
-<p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在你需要安装Hexo的目录下(新建一个文件夹)右键选择 Git Bash </p>
-<pre><code>$ npm install hexo-cli -g   
-$ hexo init blog  #初始化网站
-$ cd blog   
-$ npm install   
-$ hexo g #生成静态文件，会在当前目录下生成一个新的叫做public的文件夹/ 或者 hexo generate
-$ hexo s #启动本地web服务，用于博客的预览 或者 hexo server,这一步之后就可以通过http://localhost:4000  查看了
-</code></pre><p><em>详细命令请参考<a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">Hexo文档</a></em> </p>
-<p>另外还有几个其它常用命令:</p>
-<pre><code>$ hexo new &quot;postName&quot; #新建文章
-$ hexo new page &quot;pageName&quot; #新建页面
-</code></pre><p>常用简写</p>
-<pre><code>$ hexo n == hexo new #生成文章
-$ hexo c == hexo clean #清除缓存
-$ hexo g == hexo generate #保存修改，生成文件
-$ hexo s == hexo server #启动本地服务
-$ hexo d == hexo deploy #发布到远程
-$ hexo init #生成站点
-$ hexo new page &quot;xxx&quot; #生成页面
-$ npm install --save xxx  #安装插件
-$ npm unstall xxx #卸载插件
-</code></pre><h2 id="添加主题"><a href="#添加主题" class="headerlink" title="添加主题"></a>添加主题</h2><h3 id="安装主题（yilia）"><a href="#安装主题（yilia）" class="headerlink" title="安装主题（yilia）"></a>安装主题（yilia）</h3><pre><code>$ cd blog
-$ hexo clean
-$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
-</code></pre><h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>找到目录下的_config.yml 文件,打开找到 theme：属性并设置为yilia</p>
-<h3 id="跟新主题"><a href="#跟新主题" class="headerlink" title="跟新主题"></a>跟新主题</h3><pre><code>$ cd themes/yilia
-$ git pull
-$ cd ../..
-$ hexo g
-$ hexo s
-</code></pre><p>现在打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>,会看到我们已经应用了一个新的主题。</p>
-<h1 id="4-使用Hexo-deploy部署到github"><a href="#4-使用Hexo-deploy部署到github" class="headerlink" title="4.使用Hexo deploy部署到github"></a>4.使用Hexo deploy部署到github</h1><p>这一步恐怕是最关键的一步了，让我们把在本地web环境下预览到的博客部署到github上，然后就可以直接通过<a href="http://leebolt528.github.io" target="_blank" rel="noopener">http://username.github.io</a>访问了。不过很多教程文章对这个步骤语焉不详，这里着重说下</p>
-<h3 id="首先需要明白所谓部署到github的原理"><a href="#首先需要明白所谓部署到github的原理" class="headerlink" title="首先需要明白所谓部署到github的原理"></a>首先需要明白所谓部署到github的原理</h3><ol>
-<li>之前步骤中在Github上创建的那个特别的repo(leebolt528.github.io)一个最大的特点就是其master中的html静态文件，可以通过链接 <a href="http://leebolt528.github.io" target="_blank" rel="noopener">http://leebolt528.github.io</a> 来直接访问。</li>
-<li>hexo g 会生成一个静态网站(第一次会生成一个public目录),这个静态文件可以直接访问。</li>
-<li>需要将hexo生成的静态网站提交到github上.</li>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。<br><a id="more"></a></p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>左侧三级菜单jQuery.plugins.menuLeft-bolt</p>
+<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_menuLeft.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video>
+
+<h1 id="组件使用说明"><a href="#组件使用说明" class="headerlink" title="组件使用说明"></a>组件使用说明</h1><h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/awesome/css/font-awesome.min.css&quot;&gt;(组件中有使用此图标)
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/commonBolt.css&quot;&gt;(组件公共样式)
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/plugins/jQuery.plugins.menuLeft-bolt.css&quot;&gt;
+
+&lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/jquery/jquery.min.js&apos;&gt;&lt;/script&gt;
+&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.menuLeft-bolt.js&apos;&gt;&lt;/script&gt;
+</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div class=&quot;menuLeft&quot;&gt;&lt;/div&gt;自定义class=&quot;menuLeft&quot;用于方法调用
+</code></pre><p>通过JavaScript调用菜单组件:</p>
+<pre><code>$(&quot;.menuLeft&quot;).menuLeftBolt([options],menuLeftData);
+</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
+<li>menuLeftData<br>可以是制定格式的数据,亦可以是返回指定格式数据的Function(array/function).</li>
+<li>options<br>options可不传将使用内置默认(object)。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">默认值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">selected</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">“null”</td>
+<td style="text-align:left">表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值</td>
+</tr>
+<tr>
+<td style="text-align:center">menuOpen</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">菜单初始化是否展开</td>
+</tr>
+<tr>
+<td style="text-align:center">hideFloat</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">点击向右浮出的菜单项,悬浮的菜单框是否消失</td>
+</tr>
+<tr>
+<td style="text-align:center">callback</td>
+<td style="text-align:center">object</td>
+<td style="text-align:left">{}</td>
+<td style="text-align:left">各种事件后的回调函数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><ol start="2">
+<li>options.callback</li>
 </ol>
-<h3 id="使用hexo-deploy部署"><a href="#使用hexo-deploy部署" class="headerlink" title="使用hexo deploy部署"></a>使用hexo deploy部署</h3><p>需要在blog的根目录下的配置文件_config.xml中作如下修改：</p>
-<blockquote>
-<p>deploy:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: git<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:leebolt528/leebolt528.github.io.git  #这里的网址填你自己的<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch: master</p>
-</blockquote>
-<p>保存后运行一下命令即可完成部署：</p>
-<pre><code>npm install hexo-deployer-git --save #必须在hexo d之前安装这个扩展
-hexo d
-</code></pre><p>这时再刷新username.github.io就可以看到你的博客了。</p>
-<h1 id="5-关于hexo搭建博客后的一些基础配置"><a href="#5-关于hexo搭建博客后的一些基础配置" class="headerlink" title="5.关于hexo搭建博客后的一些基础配置"></a>5.关于hexo搭建博客后的一些基础配置</h1><p><strong><em>一些配置需要在blog根目录和themes/yilia下的两个_config.yml文件中在修改。</em></strong></p>
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><ol>
-<li><p>找到想要的主题后，下载到目录的themes下 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wuchong/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>修改全局config.yml中的theme,theme:yilia 把yilia改为pacman.</p>
-</li>
-<li>然后进行主题更新以及部署(最后上传到github).<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd themes/jacman</span><br><span class="line">git pull</span><br><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="使用畅言评论"><a href="#使用畅言评论" class="headerlink" title="使用畅言评论"></a>使用畅言评论</h2><h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><p>注册<a href="http://changyan.kuaizhan.com/" target="_blank" rel="noopener">畅言</a>后，在themes/主题下的.config.yml中修改一下字段:</p>
-<blockquote>
-<p>#畅言<br>changyan_appid: cysWBK2R1  #你在注册畅言中得到的APP ID<br>changyan_conf: c0d676145cb5b4242cedcdef8d2e97d6 #你在注册畅言中得到的APP KEY </p>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">返回值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">onExpand</td>
+<td style="text-align:center">function</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">点击菜单向右展开后的回调函数</td>
+</tr>
+<tr>
+<td style="text-align:center">onCollapse</td>
+<td style="text-align:center">function</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">点击菜单向左收缩后的回调函数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><pre><code>var menuLeftData=[
+    {&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;时间选择&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;selectTime.html&quot;,&quot;children&quot;:[]},
+    {&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;规则链库&quot;,&quot;fa&quot;:&quot;fa-link&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
+        {&quot;id&quot;:&quot;2-1&quot;,&quot;name&quot;:&quot;规则链库1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+        {&quot;id&quot;:&quot;2-2&quot;,&quot;name&quot;:&quot;规则链库2&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+        ...
+    ]},
+    {&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;设备管理&quot;,&quot;fa&quot;:&quot;fa-link&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
+        {&quot;id&quot;:&quot;3-1&quot;,&quot;name&quot;:&quot;设备管理1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
+            {&quot;id&quot;:&quot;3-1-1&quot;,&quot;name&quot;:&quot;设备管理1-1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+            ...
+        ]},
+        {&quot;id&quot;:&quot;3-2&quot;,&quot;name&quot;:&quot;设备管理2&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+        {&quot;id&quot;:&quot;3-3&quot;,&quot;name&quot;:&quot;设备管理3&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+        {&quot;id&quot;:&quot;3-4&quot;,&quot;name&quot;:&quot;设备管理4&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
+        ...
+    ]},
+    ...
+]
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">每项菜单项的唯一标识</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">菜单项的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">fa</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">菜单项名称前显示的awesome图标</td>
+</tr>
+<tr>
+<td style="text-align:center">href</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">点击后需要跳转的对应页面</td>
+</tr>
+<tr>
+<td style="text-align:center">children</td>
+<td style="text-align:center">array</td>
+<td style="text-align:left">该菜单下的子菜单</td>
+</tr>
+</tbody>
+</table>
+<h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
+<p><a href="https://github.com/leebolt528/blogic-plugins.git" target="_blank" rel="noopener">https://github.com/leebolt528/blogic-plugins.git</a></p>
 </blockquote>
-<p>在每篇文章开头的 front-matter 中添加一句comments: true，然后回到博客根目录执行命令 hexo d -g ，重新生成博客并部署博客，然后刷新，任选一篇文章进入下拉，会发现评论功能可以使用了。</p>
-<p><img src="/img/blog/changyan.png" alt="comments: true"></p>
-<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><p><a href="http://www.luck666.cn/2017/03/22/hexo-yilia-changyan/" target="_blank" rel="noopener">Hexo博客yilia主题更换畅言评论系统</a></p>
-<p><a href="https://www.lichanglin.cn/%E5%9C%A8Hexo%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%95%85%E8%A8%80%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">在Hexo中使用畅言评论系统</a></p>
-<h2 id="hexo-yilia-文章目录"><a href="#hexo-yilia-文章目录" class="headerlink" title="hexo yilia 文章目录"></a>hexo yilia 文章目录</h2><p><a href="http://www.54tianzhisheng.cn/2017/06/13/Hexo-yilia-toc/" target="_blank" rel="noopener">Hexo + yilia 主题实现文章目录</a></p>
-<h2 id="yilia标签分类"><a href="#yilia标签分类" class="headerlink" title="yilia标签分类"></a>yilia标签分类</h2><p>如果要有多个标签，可以如下图所示：</p>
-<p><img src="/img/blog/tags.png" alt="tags"></p>
-<h2 id="hexo-yilia-设置文章显示长度，不展开全文"><a href="#hexo-yilia-设置文章显示长度，不展开全文" class="headerlink" title="hexo yilia 设置文章显示长度，不展开全文"></a>hexo yilia 设置文章显示长度，不展开全文</h2><p><img src="/img/blog/more.png" alt="截取文章长度"></p>
-<h2 id="hexo-yilia-怎么写文章"><a href="#hexo-yilia-怎么写文章" class="headerlink" title="hexo yilia 怎么写文章"></a>hexo yilia 怎么写文章</h2><p>我一般写文章就是先用本地 markdown 编辑器写好后，然后放在 hexo 的 source/_posts 目录下。</p>
-<h2 id="不知道如何编写Markdown语法"><a href="#不知道如何编写Markdown语法" class="headerlink" title="不知道如何编写Markdown语法"></a>不知道如何编写Markdown语法</h2><p><a href="https://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="noopener">Markdown——入门指南</a></p>
-<p><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">Markdown 中文版语法说明</a></p>
-<h2 id="草稿（私密文章）"><a href="#草稿（私密文章）" class="headerlink" title="草稿（私密文章）"></a>草稿（私密文章）</h2><p>我们可以在blog的source下创建一个_drafts文件夹，用于保存不舍得删除的。但也不想在页面上显示的文章，或者比较私人的不想让其他人看到的文章。如果要强制预览，可以在blog目录下的.config.yml中强制开启。</p>
-<blockquote>
-<p>render_drafts: false #强制预览修改为true</p>
-</blockquote>
-<h2 id="添加站长统计"><a href="#添加站长统计" class="headerlink" title="添加站长统计"></a>添加站长统计</h2><p>进入<a href="http://www.umeng.com/" target="_blank" rel="noopener">cnzz</a>进行注册和相应的设置</p>
-<p><img src="/img/blog/cnzz1.png" alt="cnzz账号注册"></p>
-<h4 id="方式一：（亲测无效）"><a href="#方式一：（亲测无效）" class="headerlink" title="方式一：（亲测无效）"></a>方式一：（亲测无效）</h4><p>在给出的代码中复制出id，把id填入到主题里的config.yml中对应的cnzz位置，如下</p>
-<blockquote>
-<p>cnzz_tongji:<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enable: true<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siteid: 12733<strong>*</strong> </p>
-</blockquote>
-<h4 id="方式二-1"><a href="#方式二-1" class="headerlink" title="方式二"></a>方式二</h4><p><img src="/img/blog/cnzz2.png" alt="cnzz代码获取"></p>
-<p>获取自己喜欢的代码填入/blog/themes/yilia/layout/_partial/footer.ejs中的<code>&lt;/footer&gt;</code>标签前。接着访问username.github.io就可以看到页面底部为下图所示：</p>
-<p><img src="/img/blog/cnzz3.png" alt="cnzz查看分析"></p>
-<p>点击新出现的图标即可查看分析，可以如下图所示按需设置查看密码。</p>
-<p><img src="/img/blog/cnzz4.png" alt="cnzz查看密码"></p>
-<h2 id="添加百度统计分析"><a href="#添加百度统计分析" class="headerlink" title="添加百度统计分析"></a>添加百度统计分析</h2><p>进入<a href="https://tongji.baidu.com/web/25415468/welcome/login" target="_blank" rel="noopener">百度分析</a>进行注册和相应的设置</p>
-<p><img src="/img/blog/baidu1.png" alt="百度分析注册"></p>
-<p><img src="/img/blog/baidu2.png" alt="百度分析注册"></p>
-<p><img src="/img/blog/baidu3.png" alt="百度分析注册"></p>
-<h4 id="方式一-1"><a href="#方式一-1" class="headerlink" title="方式一"></a>方式一</h4><p>在给出的代码中复制出id，把id填入到主题里的config.yml中对应的cnzz位置，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Miscellaneous</span><br><span class="line">baidu_analytics: &apos;8678388163569xxxxxxxx&apos;</span><br><span class="line">google_analytics: &apos;UA-9700xxxxxxxx&apos;</span><br></pre></td></tr></table></figure></p>
-<h4 id="方式二-2"><a href="#方式二-2" class="headerlink" title="方式二"></a>方式二</h4><p>直接把上述代码粘贴到/blog/themes/yilia/layout/_partial/head.ejs中的<code>&lt;/head&gt;</code>标签前。接着就可以去该网站登陆自己的账号查看分析了。</p>
-<h2 id="RSS订阅"><a href="#RSS订阅" class="headerlink" title="RSS订阅"></a>RSS订阅</h2><p>添加rss订阅，需要安装插件</p>
-<pre><code>npm install hexo-generator-feed --save
-</code></pre><p>接着在blog目录下的config.yml中添加<code>rss: /atom.xml #rss地址  默认即可</code>。这样，rss订阅功能就开启了。</p>
-<h2 id="电脑重装了系统-多台电脑写博客？"><a href="#电脑重装了系统-多台电脑写博客？" class="headerlink" title="电脑重装了系统/多台电脑写博客？"></a>电脑重装了系统/多台电脑写博客？</h2><p>完成Hexo本地运行后，会在本地文件里生成一个public文件夹。public文件夹内是根据.md生成的html文件，也就博客的静态文件。</p>
-<p>通常情况下，我们执行：<code>$ hexo d</code>,就是把public文件夹下的文件同步到github，然后就能通过<a href="https://username.github.io/访问博客了。所以，我们的思路其实就是把静态文件和Hexo环境，分别存在username.github.io的master和hexo分支上。" target="_blank" rel="noopener">https://username.github.io/访问博客了。所以，我们的思路其实就是把静态文件和Hexo环境，分别存在username.github.io的master和hexo分支上。</a></p>
-<p><img src="/img/blog/branch.png" alt="博客分支存储"></p>
-<blockquote>
-<p>1.创建仓库–username.github.io;<br>2.创建两个分支：master 与 hexo;(git branch hexo创建,git checkout hexo切换)<br>3.设置hexo为默认分支(因为我们只需要手动管理这个分支上的Hexo网站文件);<br>4.使用git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username.github.io.git拷贝仓库;<br>5.在本地<a href="http://username.github.io文件夹下通过Git" target="_blank" rel="noopener">http://username.github.io文件夹下通过Git</a> bash依次执行安装Hexo和添加主题命令(此时当前分支应显示为hexo);<br>6.修改根目录下的_config.yml中的deploy参数，分支应为master;<br>7.依次执行git add .、git commit -m “…”、git fetch&amp;&amp;git rebase、git push origin hexo提交网站相关的文件;<br>8.进入blog目录下执行hexo g -d生成网站并部署到GitHub上。</p>
-</blockquote>
-<p><em>blog中的子文件夹中.git需要删除，否则导致提交部署不成功</em><br>之后只需要每次在本地的blog文件下进行文章的增删改操作,完了提交到hexo分支上，再部署到远程master分支上即可。</p>
-<h2 id="hexo引入图片"><a href="#hexo引入图片" class="headerlink" title="hexo引入图片"></a>hexo引入图片</h2><blockquote>
-<p>可以选择储存图片到目录文件夹下，也可以使用<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin" target="_blank" rel="noopener">图床</a>。</p>
-</blockquote>
-<h2 id="hexo-yilia-引入音乐"><a href="#hexo-yilia-引入音乐" class="headerlink" title="hexo yilia 引入音乐"></a>hexo yilia 引入音乐</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;填写音乐链接地址&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-<p>如下图，可以在网易云音乐里搜到你想要引入的音乐，然后点击如下的 “生成外链播放器” 即可：</p>
-<p><img src="/img/blog/music1.png" alt="网易云"></p>
-<p><img src="/img/blog/music2.png" alt="网易云"></p>
-<h2 id="hexo引入视频"><a href="#hexo引入视频" class="headerlink" title="hexo引入视频"></a>hexo引入视频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe height=&quot;80%&quot; width=&quot;80%&quot; src=&quot;http://player.youku.com/embed/XMjUzMzY4OTM3Ng==&quot; </span><br><span class="line">	frameborder=0 allowfullscreen&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br><span class="line">or</span><br><span class="line">&lt;video id=&quot;video&quot; controls=&quot;controls&quot;   preload=&quot;preload&quot; poster=&quot;http://media.w3.org/2010/05/sintel/poster.png&quot;&gt;</span><br><span class="line">    &lt;source id=&quot;mp4&quot; src=&quot;http://media.w3.org/2010/05/sintel/trailer.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">    &lt;source id=&quot;webm&quot; src=&quot;http://media.w3.org/2010/05/sintel/trailer.webm&quot; type=&quot;video/webm&quot;&gt;</span><br><span class="line">    &lt;source id=&quot;ogv&quot; src=&quot;http://media.w3.org/2010/ 05/sintel/trailer.ogv&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -461,11 +408,11 @@ hexo d
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">menu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">plugin</a>
         		</li>
       		
 		</ul>
@@ -521,7 +468,7 @@ hexo d
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/04/Github Pages搭建自己的博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/06/plugin/menuLeft/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -536,7 +483,7 @@ hexo d
 <nav id="article-nav">
   
   
-    <a href="/2019/05/04/gulp/gulp项目使用讲解/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/05/gulp/gulp项目使用讲解/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">gulp项目使用讲解</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -564,7 +511,7 @@ hexo d
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-number">1.</span> <span class="toc-text">1.前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#那么我为什么要建立自己的博客？"><span class="toc-number">1.1.</span> <span class="toc-text">那么我为什么要建立自己的博客？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-提高将事情讲清楚的能力"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.提高将事情讲清楚的能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-培养持续做一件事的能力"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.培养持续做一件事的能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-积累更多的知识"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.积累更多的知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-分享带来的连锁反应"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.分享带来的连锁反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-记录成长"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.记录成长</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-开始搭建Github-Pages"><span class="toc-number">2.</span> <span class="toc-text">2.开始搭建Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用前了解Github"><span class="toc-number">2.1.</span> <span class="toc-text">1.使用前了解Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-为什么选择Github"><span class="toc-number">2.2.</span> <span class="toc-text">2.为什么选择Github?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-注册github账号"><span class="toc-number">2.3.</span> <span class="toc-text">3.注册github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-创建仓库"><span class="toc-number">2.4.</span> <span class="toc-text">4.创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-开启Github-Pages"><span class="toc-number">2.5.</span> <span class="toc-text">5.开启Github Pages</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-hexo系统环境配置"><span class="toc-number">3.</span> <span class="toc-text">3.hexo系统环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Node-js"><span class="toc-number">3.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-number">3.2.</span> <span class="toc-text">安装Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自报家门"><span class="toc-number">3.2.1.</span> <span class="toc-text">自报家门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加SSH-Key到Github"><span class="toc-number">3.2.2.</span> <span class="toc-text">添加SSH Key到Github</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">3.3.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加主题"><span class="toc-number">3.4.</span> <span class="toc-text">添加主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题（yilia）"><span class="toc-number">3.4.1.</span> <span class="toc-text">安装主题（yilia）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启用主题"><span class="toc-number">3.4.2.</span> <span class="toc-text">启用主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跟新主题"><span class="toc-number">3.4.3.</span> <span class="toc-text">跟新主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用Hexo-deploy部署到github"><span class="toc-number">4.</span> <span class="toc-text">4.使用Hexo deploy部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先需要明白所谓部署到github的原理"><span class="toc-number">4.0.1.</span> <span class="toc-text">首先需要明白所谓部署到github的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo-deploy部署"><span class="toc-number">4.0.2.</span> <span class="toc-text">使用hexo deploy部署</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#5-关于hexo搭建博客后的一些基础配置"><span class="toc-number">5.</span> <span class="toc-text">5.关于hexo搭建博客后的一些基础配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改主题"><span class="toc-number">5.1.</span> <span class="toc-text">修改主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用畅言评论"><span class="toc-number">5.2.</span> <span class="toc-text">使用畅言评论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方式一"><span class="toc-number">5.2.1.</span> <span class="toc-text">方式一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方式二"><span class="toc-number">5.2.2.</span> <span class="toc-text">方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-文章目录"><span class="toc-number">5.3.</span> <span class="toc-text">hexo yilia 文章目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yilia标签分类"><span class="toc-number">5.4.</span> <span class="toc-text">yilia标签分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-设置文章显示长度，不展开全文"><span class="toc-number">5.5.</span> <span class="toc-text">hexo yilia 设置文章显示长度，不展开全文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-怎么写文章"><span class="toc-number">5.6.</span> <span class="toc-text">hexo yilia 怎么写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不知道如何编写Markdown语法"><span class="toc-number">5.7.</span> <span class="toc-text">不知道如何编写Markdown语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#草稿（私密文章）"><span class="toc-number">5.8.</span> <span class="toc-text">草稿（私密文章）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站长统计"><span class="toc-number">5.9.</span> <span class="toc-text">添加站长统计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方式一：（亲测无效）"><span class="toc-number">5.9.0.1.</span> <span class="toc-text">方式一：（亲测无效）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方式二-1"><span class="toc-number">5.9.0.2.</span> <span class="toc-text">方式二</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加百度统计分析"><span class="toc-number">5.10.</span> <span class="toc-text">添加百度统计分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方式一-1"><span class="toc-number">5.10.0.1.</span> <span class="toc-text">方式一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方式二-2"><span class="toc-number">5.10.0.2.</span> <span class="toc-text">方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS订阅"><span class="toc-number">5.11.</span> <span class="toc-text">RSS订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电脑重装了系统-多台电脑写博客？"><span class="toc-number">5.12.</span> <span class="toc-text">电脑重装了系统/多台电脑写博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo引入图片"><span class="toc-number">5.13.</span> <span class="toc-text">hexo引入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-yilia-引入音乐"><span class="toc-number">5.14.</span> <span class="toc-text">hexo yilia 引入音乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo引入视频"><span class="toc-number">5.15.</span> <span class="toc-text">hexo引入视频</span></a></li>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据格式"><span class="toc-number">4.4.</span> <span class="toc-text">数据格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -690,6 +637,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">gulp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">menu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">plugin</a>
               </li>
             
             <div class="clearfix"></div>
