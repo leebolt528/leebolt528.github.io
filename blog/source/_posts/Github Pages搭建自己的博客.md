@@ -5,10 +5,12 @@ comments: true
 toc: true
 ---
 <video id="video" controls="controls"   preload="preload" poster="\img\public\head.jpg">
-    <source id="mp4" src="\img\public\WeChat_20190504234619.mp4" type="video/mp4">
+    <source id="mp4" src="\video\blog\WeChat_20190504234619.mp4" type="video/mp4">
     <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
     <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg">
 </video>
+<span>《飞驰人生》</span>
+
 # 1.前言
 由于最近公司项目不是很紧张，想着梳理一下自己最近的收获和对技能方面有进一步系统的学习。突然发现了我确实有必要拥有一个自己的博客，于是最近一有空就会着手于这方面的研究。经过这么几天的纠结跳坑，通过阅读其他大神的分享我也终于搭建成功了自己的博客。
 <!-- more -->
