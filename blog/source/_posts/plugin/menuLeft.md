@@ -36,7 +36,7 @@ toc: true
 
 ## 参数
 * menuLeftData     
-可以是制定格式的数据,亦可以是返回指定格式数据的Function(array/function).
+可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).
 * options
 options可不传将使用内置默认(object)。
 
