@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="LeeBolt的博客">
 <meta property="og:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T15:46:31.976Z">
+<meta property="og:updated_time" content="2019-05-11T15:03:17.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="左侧三级导航菜单组件">
 <meta name="twitter:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
@@ -237,7 +237,7 @@ var _hmt = _hmt || [];
 </code></pre><p>通过JavaScript调用菜单组件:</p>
 <pre><code>$(&quot;.menuLeft&quot;).menuLeftBolt([options],menuLeftData);
 </code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li>menuLeftData<br>可以是制定格式的数据,亦可以是返回指定格式数据的Function(array/function).</li>
+<li>menuLeftData<br>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</li>
 <li>options<br>options可不传将使用内置默认(object)。</li>
 </ul>
 <table>
@@ -481,6 +481,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/05/11/plugin/treeTable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          treeTable扩展异步加载组件
+        
+      </div>
+    </a>
   
   
     <a href="/2019/05/05/gulp/gulp项目使用讲解/" id="article-nav-older" class="article-nav-link-wrap">
