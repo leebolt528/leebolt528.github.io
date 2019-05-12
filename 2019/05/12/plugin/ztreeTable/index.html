@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cczeng.github.io">
-  <title>treeTable扩展异步加载组件 | LeeBolt的博客</title>
+  <title>zTree表格化组件 | LeeBolt的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言之前的项目中有一些数据需要使用jQuery.treeTable表格分级展示，但是返回的数据量很大，因此不可以一次性返回所有数据。后续基于jQuery.treeTable插件进行了封装，具体实现为在支持原有同步加载的基础上实现可先异步展示指定部分数据，在点击事件上通过异步加载请求展示需要查看的数据。">
+  <meta name="description" content="前言曾经有一次项目中需要一次性以表格分级方式展示所有后台返回的数据，当然毫无疑问应该直接使用jQuery.treeTable插件了，然而使用后发现却不尽人意，因为当数据量很大时，treeTable初始化表格会花费很多的时间，最后使用了jQuery.zTree插件，把其封装成Table格式，性能方面对比前者有很大提升。">
 <meta name="keywords" content="menu,plugin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="treeTable扩展异步加载组件">
-<meta property="og:url" content="https://cczeng.github.io/2019/05/11/plugin/treeTable/index.html">
+<meta property="og:title" content="zTree表格化组件">
+<meta property="og:url" content="https://cczeng.github.io/2019/05/12/plugin/ztreeTable/index.html">
 <meta property="og:site_name" content="LeeBolt的博客">
-<meta property="og:description" content="前言之前的项目中有一些数据需要使用jQuery.treeTable表格分级展示，但是返回的数据量很大，因此不可以一次性返回所有数据。后续基于jQuery.treeTable插件进行了封装，具体实现为在支持原有同步加载的基础上实现可先异步展示指定部分数据，在点击事件上通过异步加载请求展示需要查看的数据。">
+<meta property="og:description" content="前言曾经有一次项目中需要一次性以表格分级方式展示所有后台返回的数据，当然毫无疑问应该直接使用jQuery.treeTable插件了，然而使用后发现却不尽人意，因为当数据量很大时，treeTable初始化表格会花费很多的时间，最后使用了jQuery.zTree插件，把其封装成Table格式，性能方面对比前者有很大提升。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cczeng.github.io/img/plugin/treeTableError.png">
-<meta property="og:updated_time" content="2019-05-12T02:25:15.160Z">
+<meta property="og:image" content="https://cczeng.github.io/img/plugin/zTreeTable.png">
+<meta property="og:updated_time" content="2019-05-12T04:54:49.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="treeTable扩展异步加载组件">
-<meta name="twitter:description" content="前言之前的项目中有一些数据需要使用jQuery.treeTable表格分级展示，但是返回的数据量很大，因此不可以一次性返回所有数据。后续基于jQuery.treeTable插件进行了封装，具体实现为在支持原有同步加载的基础上实现可先异步展示指定部分数据，在点击事件上通过异步加载请求展示需要查看的数据。">
-<meta name="twitter:image" content="https://cczeng.github.io/img/plugin/treeTableError.png">
+<meta name="twitter:title" content="zTree表格化组件">
+<meta name="twitter:description" content="前言曾经有一次项目中需要一次性以表格分级方式展示所有后台返回的数据，当然毫无疑问应该直接使用jQuery.treeTable插件了，然而使用后发现却不尽人意，因为当数据量很大时，treeTable初始化表格会花费很多的时间，最后使用了jQuery.zTree插件，把其封装成Table格式，性能方面对比前者有很大提升。">
+<meta name="twitter:image" content="https://cczeng.github.io/img/plugin/zTreeTable.png">
   
   
     <link rel="icon" href="/img/public/favicon.ico">
@@ -178,20 +178,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-plugin/treeTable" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-plugin/ztreeTable" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      treeTable扩展异步加载组件
+      zTree表格化组件
     </h1>
   
 
         
-        <a href="/2019/05/11/plugin/treeTable/" class="archive-article-date">
-  	<time datetime="2019-05-11T15:57:20.744Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
+        <a href="/2019/05/12/plugin/ztreeTable/" class="archive-article-date">
+  	<time datetime="2019-05-12T02:35:47.435Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-12</time>
 </a>
         
       </header>
@@ -205,7 +205,7 @@ var _hmt = _hmt || [];
 		<div id="toc-article" class="toc-article">
 		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-treeTData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.treeTData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-columns"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ztreeData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.ztreeData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-columns"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
 		 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -225,49 +225,47 @@ var _hmt = _hmt || [];
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前的项目中有一些数据需要使用jQuery.treeTable表格分级展示，但是返回的数据量很大，因此不可以一次性返回所有数据。后续基于jQuery.treeTable插件进行了封装，具体实现为在支持原有同步加载的基础上实现可先异步展示指定部分数据，在点击事件上通过异步加载请求展示需要查看的数据。<br><a id="more"></a></p>
-<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>treeTable扩展异步加载组件jQuery.plugins.treeTable-bolt</p>
-<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><p><img src="/img/plugin/treeTableError.png" alt="ajax请求异常"><br><span>ajax请求异常</span>  </p>
-<p><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_treeTable.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video></p>
-<h1 id="组件使用说明"><a href="#组件使用说明" class="headerlink" title="组件使用说明"></a>组件使用说明</h1><h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/awesome/css/font-awesome.min.css&quot;&gt;(组件加载动画使用此图标)
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>曾经有一次项目中需要一次性以表格分级方式展示所有后台返回的数据，当然毫无疑问应该直接使用jQuery.treeTable插件了，然而使用后发现却不尽人意，因为当数据量很大时，treeTable初始化表格会花费很多的时间，最后使用了jQuery.zTree插件，把其封装成Table格式，性能方面对比前者有很大提升。<br><a id="more"></a></p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>zTree表格化组件jQuery.plugins.zTreeTable-bolt</p>
+<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><p><img src="/img/plugin/zTreeTable.png" alt="zTreeTable效果图">  </p>
+<h1 id="组件使用说明"><a href="#组件使用说明" class="headerlink" title="组件使用说明"></a>组件使用说明</h1><h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/awesome/css/font-awesome.min.css&quot;&gt;(组件有使用此图标)
 &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/commonBolt.css&quot;&gt;(组件公共样式)
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/treetable/jquery.treetable.css&quot;&gt;(jQuery.treeTable)
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/plugins/jQuery.plugins.treeTable-bolt.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/ztree/zTreeStyle.css&quot;&gt;(jQuery.zTree)
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/plugins/jQuery.plugins.zTreeTable-bolt.css&quot;&gt;
 
 &lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/jquery/jquery.min.js&apos;&gt;&lt;/script&gt;
-&lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/treetable/jquery.treetable.js&apos;&gt;&lt;/script&gt;(jQuery.treeTable)
-&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.treeTable-bolt.js&apos;&gt;&lt;/script&gt;
-</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div class=&quot;treeTable&quot;&gt;&lt;/div&gt;自定义class=&quot;treeTable&quot;用于方法调用
+&lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/ztree/jquery.ztree.all.min.js&apos;&gt;&lt;/script&gt;(jQuery.zTree)
+&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.zTreeTable-bolt.js&apos;&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<p><a href="http://www.treejs.cn/v3/api.php" target="_blank" rel="noopener">ztree官网地址</a></p>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div class=&quot;ztreeTable&quot;&gt;&lt;/div&gt;自定义class=&quot;ztreeTable&quot;用于方法调用
 </code></pre><p>通过JavaScript调用菜单组件:</p>
-<pre><code>$(&quot;.treeTable&quot;).treeTableBolt(options,treeTData);
-</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="1-treeTData"><a href="#1-treeTData" class="headerlink" title="1.treeTData"></a>1.treeTData</h3><p>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</p>
+<pre><code>$(&quot;.ztreeTable&quot;).ztreeTableBolt(options,ztreeData);
+</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="1-ztreeData"><a href="#1-ztreeData" class="headerlink" title="1.ztreeData"></a>1.ztreeData</h3><p>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</p>
 <h4 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h4><pre><code>var treeTData=[
     {
-        &quot;id&quot; : &quot;default&quot;,//id
-        &quot;idP&quot; : &quot;&quot;,//父类id
-        &quot;selected&quot;:true,//默认选中此行，背景高亮
-        &quot;img&quot; : &quot;&quot;,//数据项前展示的小图标
-        &quot;last&quot; : false,//是否为叶子节点
-        &quot;synChild&quot; : true,//默认是否展开,显示子节点
-        &quot;ajax&quot; : &quot;/app/monitor/orchestration/ajax/deployments&quot;,//用于请求子节点
-        &quot;parameterName&quot; : &quot;namespace&quot;,//级别分类，表示该数据属于第几级，用于异步请求数据参数使用
-        &quot;subResourceCount&quot; : &quot;1&quot;,//该节点下的子节点数,若场景不需要或获取不到默认返回1
-        &quot;data&quot; : {//数据项展示内容，参数名称与options.columns的filed字段值对应匹配
-            &quot;name&quot; : &quot;default&quot;,
-            &quot;cpu&quot; : &quot;0.04794590946692686&quot;,
-            &quot;memory&quot; : &quot;463245312&quot;,
-            &quot;diskReadRate&quot; : &quot;0&quot;,
-            &quot;diskWriteRate&quot; : &quot;0&quot;,
-            &quot;networkReceive&quot; : &quot;142576.61410056025&quot;,
-            &quot;networkTransmit&quot; : &quot;24045.73368741528&quot;
+        open:true,//默认是否展开,显示子节点
+        id:&quot;0&quot;,//id
+        pId:&quot;1&quot;,//父类id
+        selected:true,//默认选中此行，背景高亮
+        highLight:true,//是否高亮显示此行字体
+        parameter:{//数据项展示内容，参数名称与options.columns的filed字段值对应匹配
+            name:&quot;Tomcat Servlet Process&quot;,
+            funPara:&quot;/paas/operator/redis/service/node&quot;,
+            startTime:&quot;17:33:18 469&quot;,
+            gap:&quot;0&quot;,                            
+            eTime:&quot;696&quot;,    
+            className:&quot;&quot;, 
+            apiType:&quot;TOMCAT&quot;,
+            appNode:&quot;dev_bcm&quot;,
+            appName:&quot;dev_bcm&quot;,
+            icon:&quot;fa-warning&quot;    
         }
     },
     ...
 ]
-</code></pre><blockquote>
-<p>异步请求说明：<br>表格数据项请求子节点数据时，使用以上数据中ajax参数值;<br>请求参数为一个对象,包含节点本身以及所有的父级节点键值对{以上数据中的parameterName字段值：data.name}  (基于项目后台需求的,如果不符合你的使用场景可自行修改源码)<br>eg:<br>{pod: “redis-operator-5bbb7f78bf-48j9f”, byname: “redis-operator”, namespace: “default”}</p>
-</blockquote>
-<h3 id="2-options"><a href="#2-options" class="headerlink" title="2.options"></a>2.options</h3><p>options(object)。</p>
+</code></pre><h3 id="2-options"><a href="#2-options" class="headerlink" title="2.options"></a>2.options</h3><p>options(object)。</p>
 <table>
 <thead>
 <tr>
@@ -284,21 +282,7 @@ var _hmt = _hmt || [];
 <td style="text-align:center">number</td>
 <td style="text-align:left">false</td>
 <td style="text-align:left">1</td>
-<td style="text-align:left">需要在父级元素下展示表格内容的宽度比,取值 &gt;0$$&lt;=1</td>
-</tr>
-<tr>
-<td style="text-align:center">startUrl</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">false(async:true时，需要传入ajax)</td>
-<td style="text-align:left">“”</td>
-<td style="text-align:left">初始化表格时，用于请求数据的ajax,需配合async参数使用</td>
-</tr>
-<tr>
-<td style="text-align:center">async</td>
-<td style="text-align:center">boolean</td>
-<td style="text-align:left">false</td>
-<td style="text-align:left">false</td>
-<td style="text-align:left">初始化表格时,async=true,使用startUrl请求数据;async=false,使用treeTData数据.</td>
+<td style="text-align:left">需要在父级元素下展示表格内容的宽度比,取值 &gt;0&amp;&amp;&lt;=1</td>
 </tr>
 <tr>
 <td style="text-align:center">class</td>
@@ -358,7 +342,7 @@ var _hmt = _hmt || [];
 <thead>
 <tr>
 <th style="text-align:center">方法名称</th>
-<th style="text-align:center">参数</th>
+<th style="text-align:center">类型</th>
 <th style="text-align:left">返回值</th>
 <th style="text-align:left">描述</th>
 </tr>
@@ -367,22 +351,21 @@ var _hmt = _hmt || [];
 <tr>
 <td style="text-align:center">getSelectedParam</td>
 <td style="text-align:center">function</td>
-<td style="text-align:left">param(后台返回的此行数据信息)</td>
-<td style="text-align:left">点击数据行后的回调函数</td>
+<td style="text-align:left">param(ztree行信息以及后台返回的此行数据信息)</td>
+<td style="text-align:left">获取当前选中行的信息</td>
 </tr>
 <tr>
 <td style="text-align:center">getSelectedElem</td>
 <td style="text-align:center">function</td>
 <td style="text-align:left">$this(行元素)</td>
-<td style="text-align:left">展开数据行后的回调函数</td>
+<td style="text-align:left">获取当前选中的行元素</td>
 </tr>
 </tbody>
 </table>
-<pre><code>var treeTableObj=$(&quot;.treeTable&quot;).treeTableBolt(options,treeTData);
-var param=treeTableObj.getSelectedParam();
-var $this=treeTableObj.getSelectedElem();
-</code></pre><h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><p>使用代码时需将temvar变量相关局部代码删除，setTimeout方法中的注释代码放开,并且删除setTimeout(静态页面使用setTimeout模拟ajax效果)</p>
-<blockquote>
+<pre><code>var zTreeTableObj=$(&quot;.ztreeTable&quot;).ztreeTableBolt(options,treeTData);
+var param=zTreeTableObj.getSelectedParam();
+var $this=zTreeTableObj.getSelectedElem();
+</code></pre><h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
 <p><a href="https://github.com/leebolt528/blogic-plugins.git" target="_blank" rel="noopener">https://github.com/leebolt528/blogic-plugins.git</a></p>
 </blockquote>
 
@@ -489,7 +472,7 @@ var $this=treeTableObj.getSelectedElem();
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/11/plugin/treeTable/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/12/plugin/ztreeTable/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -503,18 +486,18 @@ var $this=treeTableObj.getSelectedElem();
   
 <nav id="article-nav">
   
-    <a href="/2019/05/11/plugin/ztreeTable/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/12/plugin/promptExpre/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          zTree表格化组件
+          input输入字段级联提示
         
       </div>
     </a>
   
   
-    <a href="/2019/05/11/plugin/menuLeft/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">左侧三级导航菜单组件</div>
+    <a href="/2019/05/12/plugin/treeTable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">treeTable扩展异步加载组件</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -541,7 +524,7 @@ var $this=treeTableObj.getSelectedElem();
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-treeTData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.treeTData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-columns"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ztreeData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.ztreeData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-columns"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.columns</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -727,6 +710,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://www.pexels.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Pexels-免费高品质图片网</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>iconfont-阿里巴巴矢量图标库</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://loading.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>loding-加载动画</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://insights.thoughtworkers.org/tech-radar/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>ThoughtWorks-洞见</a>
             </li>
           
         </ul>

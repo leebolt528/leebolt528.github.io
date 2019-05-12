@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="LeeBolt的博客">
 <meta property="og:description" content="前言由于关系图的灵活度较高，具体规则需求不一致，一般而言任何库估计也没有封装好的成品。于是我使用了免费并且灵活度很高的D3.js绘制关系图，期间需求一直该改改，但最终确实也没运用到生产环境中去，不过我还是将自己写的这部分总结了一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-12T02:26:46.734Z">
+<meta property="og:updated_time" content="2019-05-12T04:53:51.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="D3关系图组件">
 <meta name="twitter:description" content="前言由于关系图的灵活度较高，具体规则需求不一致，一般而言任何库估计也没有封装好的成品。于是我使用了免费并且灵活度很高的D3.js绘制关系图，期间需求一直该改改，但最终确实也没运用到生产环境中去，不过我还是将自己写的这部分总结了一下。">
@@ -189,7 +189,7 @@ var _hmt = _hmt || [];
 
         
         <a href="/2019/05/12/plugin/relativeD3/" class="archive-article-date">
-  	<time datetime="2019-05-11T16:07:06.855Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-12</time>
+  	<time datetime="2019-05-12T02:35:47.431Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-12</time>
 </a>
         
       </header>
@@ -240,11 +240,14 @@ var _hmt = _hmt || [];
 &lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/jquery/jquery.min.js&apos;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;../js/common/D3/d3.min.js&quot;&gt;&lt;/script&gt;(d3库)
 &lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.relativeD3-bolt.js&apos;&gt;&lt;/script&gt;
-</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div id=&quot;canvas&quot;&gt;&lt;/div&gt;自定义id=&quot;canvas&quot;用于方法调用
+</code></pre><blockquote>
+<p><a href="https://d3js.org/" target="_blank" rel="noopener">D3官网</a><br><a href="http://www.decembercafe.org/" target="_blank" rel="noopener">D3入门</a></p>
+</blockquote>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div id=&quot;canvas&quot;&gt;&lt;/div&gt;自定义id=&quot;canvas&quot;用于方法调用
 </code></pre><p>通过JavaScript调用菜单组件:</p>
 <pre><code>$.relativeD3(id,d3Data,[options]);
 </code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="1-id"><a href="#1-id" class="headerlink" title="1.id"></a>1.id</h3><p>容器id值</p>
-<h3 id="2-d3Data"><a href="#2-d3Data" class="headerlink" title="2.d3Data"></a>2.d3Data</h3><p>可以是制定格式的数据(object).</p>
+<h3 id="2-d3Data"><a href="#2-d3Data" class="headerlink" title="2.d3Data"></a>2.d3Data</h3><p>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</p>
 <h4 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h4><pre><code>var d3Data={
     &quot;nodes&quot;: [{
             &quot;name&quot;: &quot;存量营销(同网)&quot;,//节点名称
@@ -548,9 +551,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2019/05/12/plugin/treeTable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          treeTable扩展异步加载组件
+        
+      </div>
+    </a>
   
-    <a href="/2019/05/11/plugin/ztreeTable/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">zTree表格化组件</div>
+  
+    <a href="/2019/05/12/plugin/menuLeft/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">左侧三级导航菜单组件</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -763,6 +775,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://www.pexels.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Pexels-免费高品质图片网</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>iconfont-阿里巴巴矢量图标库</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://loading.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>loding-加载动画</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://insights.thoughtworkers.org/tech-radar/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>ThoughtWorks-洞见</a>
             </li>
           
         </ul>
