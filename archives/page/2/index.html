@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cczeng.github.io">
-  <title>左侧三级导航菜单组件 | LeeBolt的博客</title>
+  <title>Archives | LeeBolt的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
-<meta name="keywords" content="menu,plugin">
-<meta property="og:type" content="article">
-<meta property="og:title" content="左侧三级导航菜单组件">
-<meta property="og:url" content="https://cczeng.github.io/2019/05/06/plugin/menuLeft/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LeeBolt的博客">
+<meta property="og:url" content="https://cczeng.github.io/archives/page/2/index.html">
 <meta property="og:site_name" content="LeeBolt的博客">
-<meta property="og:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-11T15:03:17.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="左侧三级导航菜单组件">
-<meta name="twitter:description" content="前言之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。">
+<meta name="twitter:title" content="LeeBolt的博客">
   
   
     <link rel="icon" href="/img/public/favicon.ico">
@@ -176,369 +171,67 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-plugin/menuLeft" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      左侧三级导航菜单组件
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/05/Github Pages搭建自己的博客/" class="archive-article-date">
+  	<time datetime="2019-05-05T12:52:03.225Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-05</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/05/Github Pages搭建自己的博客/">使用Hexo + Github Pages搭建个人独立博客</a>
     </h1>
   
 
-        
-        <a href="/2019/05/06/plugin/menuLeft/" class="archive-article-date">
-  	<time datetime="2019-05-06T13:51:07.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
-</a>
-        
-      </header>
-    
-	<!-- 目录内容 -->
-	
-	    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-		  <span class="btn-bg"></span>
-		  <span class="btn-text">文章导航</span>
-		  </p>
-		<div id="toc-article" class="toc-article">
-		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-			<strong class="toc-title">文章目录</strong>
-		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据格式"><span class="toc-number">4.4.</span> <span class="toc-text">数据格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
-		 </div>
-	   <script type="text/javascript">
-		function showToc(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:block");
-			show_toc_btn.setAttribute("style","display:none");
-			};
-		function showBtn(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:none");
-			show_toc_btn.setAttribute("style","display:block");
-			};
-	   </script>
-	      
-	<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前的项目中自己也封装了一些比较实用的小组件,一直想整理来着就这样拖到了来年。我终于不能忍自己啦，虽然最近项目上不算轻松，但我还是毅然决然地开始了“蓄谋已久”的事情来告别拖延。然而却发现之前的代码写的是多么潦草和随意，简直不忍直视，就这样接下来也花费了远比我预估多多的时间。<br><a id="more"></a></p>
-<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>左侧三级菜单jQuery.plugins.menuLeft-bolt</p>
-<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_menuLeft.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video>
-
-<h1 id="组件使用说明"><a href="#组件使用说明" class="headerlink" title="组件使用说明"></a>组件使用说明</h1><h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/awesome/css/font-awesome.min.css&quot;&gt;(组件中有使用此图标)
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/commonBolt.css&quot;&gt;(组件公共样式)
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/plugins/jQuery.plugins.menuLeft-bolt.css&quot;&gt;
-
-&lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/jquery/jquery.min.js&apos;&gt;&lt;/script&gt;
-&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.menuLeft-bolt.js&apos;&gt;&lt;/script&gt;
-</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div class=&quot;menuLeft&quot;&gt;&lt;/div&gt;自定义class=&quot;menuLeft&quot;用于方法调用
-</code></pre><p>通过JavaScript调用菜单组件:</p>
-<pre><code>$(&quot;.menuLeft&quot;).menuLeftBolt([options],menuLeftData);
-</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul>
-<li>menuLeftData<br>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</li>
-<li>options<br>options可不传将使用内置默认(object)。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:left">默认值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">selected</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">“null”</td>
-<td style="text-align:left">表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值</td>
-</tr>
-<tr>
-<td style="text-align:center">menuOpen</td>
-<td style="text-align:center">boolean</td>
-<td style="text-align:left">true</td>
-<td style="text-align:left">菜单初始化是否展开</td>
-</tr>
-<tr>
-<td style="text-align:center">hideFloat</td>
-<td style="text-align:center">boolean</td>
-<td style="text-align:left">true</td>
-<td style="text-align:left">点击向右浮出的菜单项,悬浮的菜单框是否消失</td>
-</tr>
-<tr>
-<td style="text-align:center">callback</td>
-<td style="text-align:center">object</td>
-<td style="text-align:left">{}</td>
-<td style="text-align:left">各种事件后的回调函数</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><ol start="2">
-<li>options.callback</li>
-</ol>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:left">返回值</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">onExpand</td>
-<td style="text-align:center">function</td>
-<td style="text-align:left">无</td>
-<td style="text-align:left">点击菜单向右展开后的回调函数</td>
-</tr>
-<tr>
-<td style="text-align:center">onCollapse</td>
-<td style="text-align:center">function</td>
-<td style="text-align:left">无</td>
-<td style="text-align:left">点击菜单向左收缩后的回调函数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><pre><code>var menuLeftData=[
-    {&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;时间选择&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;selectTime.html&quot;,&quot;children&quot;:[]},
-    {&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;规则链库&quot;,&quot;fa&quot;:&quot;fa-link&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
-        {&quot;id&quot;:&quot;2-1&quot;,&quot;name&quot;:&quot;规则链库1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;2-2&quot;,&quot;name&quot;:&quot;规则链库2&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-        ...
-    ]},
-    {&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;设备管理&quot;,&quot;fa&quot;:&quot;fa-link&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
-        {&quot;id&quot;:&quot;3-1&quot;,&quot;name&quot;:&quot;设备管理1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[
-            {&quot;id&quot;:&quot;3-1-1&quot;,&quot;name&quot;:&quot;设备管理1-1&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-            ...
-        ]},
-        {&quot;id&quot;:&quot;3-2&quot;,&quot;name&quot;:&quot;设备管理2&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;3-3&quot;,&quot;name&quot;:&quot;设备管理3&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;3-4&quot;,&quot;name&quot;:&quot;设备管理4&quot;,&quot;fa&quot;:&quot;fa-home&quot;,&quot;href&quot;:&quot;#&quot;,&quot;children&quot;:[]},
-        ...
-    ]},
-    ...
-]
-</code></pre><table>
-<thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">id</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">每项菜单项的唯一标识</td>
-</tr>
-<tr>
-<td style="text-align:center">name</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">菜单项的名称</td>
-</tr>
-<tr>
-<td style="text-align:center">fa</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">菜单项名称前显示的awesome图标</td>
-</tr>
-<tr>
-<td style="text-align:center">href</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">点击后需要跳转的对应页面</td>
-</tr>
-<tr>
-<td style="text-align:center">children</td>
-<td style="text-align:center">array</td>
-<td style="text-align:left">该菜单下的子菜单</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
-<p><a href="https://github.com/leebolt528/blogic-plugins.git" target="_blank" rel="noopener">https://github.com/leebolt528/blogic-plugins.git</a></p>
-</blockquote>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我喝咖啡<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/public/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/public/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">menu</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">plugin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/05/06/plugin/menuLeft/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/11/plugin/treeTable/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          treeTable扩展异步加载组件
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/05/gulp/gulp项目使用讲解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">gulp项目使用讲解</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据格式"><span class="toc-number">4.4.</span> <span class="toc-text">数据格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -563,8 +256,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -641,19 +334,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">menu</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">plugin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
             
             <div class="clearfix"></div>
