@@ -37,6 +37,8 @@ relativeD3组件jQuery.plugins.relativeD3-bolt
     <script type="text/javascript" src="../js/common/D3/d3.min.js"></script>(d3库)
     <script type='text/javascript' src='../js/plugins/jQuery.plugins.relativeD3-bolt.js'></script>
 
+>[D3官网](https://d3js.org/)  
+[D3入门](http://www.decembercafe.org/)
 ## 方法
 
     <div id="canvas"></div>自定义id="canvas"用于方法调用
@@ -49,7 +51,7 @@ relativeD3组件jQuery.plugins.relativeD3-bolt
 ### 1.id  
 容器id值
 ### 2.d3Data     
-可以是制定格式的数据(object).
+可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).
 #### 数据格式
 
     var d3Data={

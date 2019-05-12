@@ -29,6 +29,12 @@ treeTable扩展异步加载组件jQuery.plugins.treeTable-bolt
     <script type='text/javascript' src='../js/common/treetable/jquery.treetable.js'></script>(jQuery.treeTable)
     <script type='text/javascript' src='../js/plugins/jQuery.plugins.treeTable-bolt.js'></script>
 
+>[jQuery 官网链接](http://plugins.jquery.com/treetable/)  
+[API 地址](http://ludo.cubicphuse.nl/jquery-treetable/)   
+treeTable参考文档：
+[jquery.treetable.js的使用](http://www.ijquery.cn/?p=1563)&nbsp;&nbsp;&nbsp;&nbsp;
+[jQuery.treetable使用及异步加载](https://www.cnblogs.com/telwanggs/p/7434526.html)
+
 ## 方法
 
     <div class="treeTable"></div>自定义class="treeTable"用于方法调用
@@ -77,7 +83,7 @@ options(object)。
 
 | 名称          | 类型           | 必传 | 默认值  | 描述  |
 | :-----------: |:-------------:| :----- |:-----  |:-----|
-| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0$$<=1|
+| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0&&<=1|
 | startUrl      | string       | false(async:true时，需要传入ajax) |  ""   |初始化表格时，用于请求数据的ajax,需配合async参数使用|
 | async     | boolean       | false |  false   |初始化表格时,async=true,使用startUrl请求数据;async=false,使用treeTData数据.|
 | class     | string       | false |  ""   |用户可以在父级元素上添加多个class,空格隔离。组件默认提供1.table-click:点击每行数据高亮; 2.table-hover：鼠标悬浮每行数据高亮|
@@ -112,10 +118,10 @@ options(object)。
 
 ## 对象方法
 
-| 方法名称          | 参数           | 返回值  | 描述  |
+| 方法名称          | 类型           | 返回值  | 描述  |
 | :-----------: |:-------------:| :-----  |:-----|
-| getSelectedParam      | function   | param(后台返回的此行数据信息)     |点击数据行后的回调函数|
-| getSelectedElem    | function    |  $this(行元素)    |展开数据行后的回调函数|
+| getSelectedParam      | function   | param(后台返回的此行数据信息)     |获取当前选中行的信息|
+| getSelectedElem    | function    |  $this(行元素)    |获取当前选中的行元素|
 
     var treeTableObj=$(".treeTable").treeTableBolt(options,treeTData);
     var param=treeTableObj.getSelectedParam();

@@ -23,6 +23,7 @@ zTree表格化组件jQuery.plugins.zTreeTable-bolt
     <script type='text/javascript' src='../js/common/ztree/jquery.ztree.all.min.js'></script>(jQuery.zTree)
     <script type='text/javascript' src='../js/plugins/jQuery.plugins.zTreeTable-bolt.js'></script>
 
+>[ztree官网地址](http://www.treejs.cn/v3/api.php)
 ## 方法
 
     <div class="ztreeTable"></div>自定义class="ztreeTable"用于方法调用
@@ -64,7 +65,7 @@ options(object)。
 
 | 名称          | 类型           | 必传 | 默认值  | 描述  |
 | :-----------: |:-------------:| :----- |:-----  |:-----|
-| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0$$<=1|
+| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0&&<=1|
 | class     | string       | false |  ""   |用户可以在父级元素上添加多个class,空格隔离。组件默认提供1.table-click:点击每行数据高亮; 2.table-hover：鼠标悬浮每行数据高亮|
 | columns     | array       | true |  []   |表格头部信息|
 | callback      | object        | false |   {}    |各种事件后的回调函数|
@@ -97,10 +98,10 @@ options(object)。
 
 ## 对象方法
 
-| 方法名称          | 参数           | 返回值  | 描述  |
+| 方法名称          | 类型           | 返回值  | 描述  |
 | :-----------: |:-------------:| :-----  |:-----|
-| getSelectedParam      | function   | param(ztree行信息以及后台返回的此行数据信息)     |点击数据行后的回调函数|
-| getSelectedElem    | function    |  $this(行元素)    |展开数据行后的回调函数|
+| getSelectedParam      | function   | param(ztree行信息以及后台返回的此行数据信息)     |获取当前选中行的信息|
+| getSelectedElem    | function    |  $this(行元素)    |获取当前选中的行元素|
 
     var zTreeTableObj=$(".ztreeTable").ztreeTableBolt(options,treeTData);
     var param=zTreeTableObj.getSelectedParam();
