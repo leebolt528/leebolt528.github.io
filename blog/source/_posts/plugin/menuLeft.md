@@ -35,25 +35,9 @@ toc: true
     $(".menuLeft").menuLeftBolt([options],menuLeftData);
 
 ## 参数
-* menuLeftData     
+### 1.menuLeftData     
 可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).
-* options
-options可不传将使用内置默认(object)。
-
-| 名称          | 类型           | 默认值  | 描述  |
-| :-----------: |:-------------:| :-----  |:-----|
-| selected      | string        | "null"  |表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值|
-| menuOpen      | boolean       |  true   |菜单初始化是否展开|
-| hideFloat     | boolean       |  true   |点击向右浮出的菜单项,悬浮的菜单框是否消失|
-| callback      | object        |   {}    |各种事件后的回调函数|
-
-* 2. options.callback
-
-| 名称          | 类型           | 返回值  | 描述  |
-| :-----------: |:-------------:| :-----  |:-----|
-| onExpand      | function       | 无     |点击菜单向右展开后的回调函数|
-| onCollapse    | function       |  无    |点击菜单向左收缩后的回调函数|
-## 数据格式
+#### 数据格式
 
     var menuLeftData=[
         {"id":"1","name":"时间选择","fa":"fa-home","href":"selectTime.html","children":[]},
@@ -83,6 +67,23 @@ options可不传将使用内置默认(object)。
 | fa       | string    | 菜单项名称前显示的awesome图标   |
 | href     | string    | 点击后需要跳转的对应页面    |
 | children | array     | 该菜单下的子菜单    |
+
+### 2.options
+options可不传将使用内置默认(object)。
+
+| 名称          | 类型           | 默认值  | 描述  |
+| :-----------: |:-------------:| :-----  |:-----|
+| selected      | string        | "null"  |表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值|
+| menuOpen      | boolean       |  true   |菜单初始化是否展开|
+| hideFloat     | boolean       |  true   |点击向右浮出的菜单项,悬浮的菜单框是否消失|
+| callback      | object        |   {}    |各种事件后的回调函数|
+
+#### options.callback
+
+| 名称          | 类型           | 参数  | 描述  |
+| :-----------: |:-------------:| :-----  |:-----|
+| onExpand      | function       | 无     |点击菜单向右展开后的回调函数|
+| onCollapse    | function       |  无    |点击菜单向左收缩后的回调函数|
 
 ## 代码地址
 >https://github.com/leebolt528/blogic-plugins.git

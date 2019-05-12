@@ -8,7 +8,7 @@ toc: true
 之前的项目中有一些数据需要使用jQuery.treeTable表格分级展示，但是返回的数据量很大，因此不可以一次性返回所有数据。后续基于jQuery.treeTable插件进行了封装，具体实现为在支持原有同步加载的基础上实现可先异步展示指定部分数据，在点击事件上通过异步加载请求展示需要查看的数据。
 <!-- more -->
 # 组件
-左侧三级菜单jQuery.plugins.treeTable-bolt
+treeTable扩展异步加载组件jQuery.plugins.treeTable-bolt
 # 组件效果展示
 ![ajax请求异常](/img/plugin/treeTableError.png)  
 <span>ajax请求异常</span>  
@@ -38,47 +38,9 @@ toc: true
     $(".treeTable").treeTableBolt(options,treeTData);
 
 ## 参数
-* treeTData     
+### 1.treeTData     
 可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).
-* options
-options(object)。
-
-| 名称          | 类型           | 必传 | 默认值  | 描述  |
-| :-----------: |:-------------:| :----- |:-----  |:-----|
-| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0$$<=1|
-| startUrl      | string       | false(async:true时，需要传入ajax) |  ""   |初始化表格时，用于请求数据的ajax,需配合async参数使用|
-| async     | boolean       | false |  false   |初始化表格时,async=true,使用startUrl请求数据;async=false,使用treeTData数据.|
-| class     | string       | false |  ""   |用户可以在父级元素上添加多个class,空格隔离。组件默认提供1.table-click:点击每行数据高亮; 2.table-hover：鼠标悬浮每行数据高亮|
-| columns     | array       | true |  []   |表格头部信息|
-| callback      | object        | false |   {}    |各种事件后的回调函数|
-
-* 2. options.columns
-```
-    [
-        {
-            field: 'name',//列数据项字段，用于数据匹配
-            title: '名称',//列数据项名称
-            align:'left',//列数据项内容对齐方式(left,center,right)
-            width:"30%"//列数据项宽度
-        },
-        {
-            field: 'memory',
-            title: '内存使用量（GiB）',
-            align:'center',
-            width:"20%"
-        },
-        ...
-    ]
-```
-* 3. options.callback
-
-| 名称          | 类型           | 返回值  | 描述  |
-| :-----------: |:-------------:| :-----  |:-----|
-| onClick      | function       | $this(行元素),param(后台返回的此行数据信息)     |点击数据行后的回调函数|
-| onExpand    | function       |  $this,param    |展开数据行后的回调函数|
-| onCollapse    | function       |  $this,param    |收缩数据行后的回调函数|
-
-## 数据格式
+#### 数据格式
 
     var treeTData=[
         {
@@ -109,6 +71,55 @@ options(object)。
 请求参数为一个对象,包含节点本身以及所有的父级节点键值对{以上数据中的parameterName字段值：data.name}  (基于项目后台需求的,如果不符合你的使用场景可自行修改源码)
 eg:
 {pod: "redis-operator-5bbb7f78bf-48j9f", byname: "redis-operator", namespace: "default"}
+
+### 2.options
+options(object)。
+
+| 名称          | 类型           | 必传 | 默认值  | 描述  |
+| :-----------: |:-------------:| :----- |:-----  |:-----|
+| displayW      | number        | false | 1  |需要在父级元素下展示表格内容的宽度比,取值 >0$$<=1|
+| startUrl      | string       | false(async:true时，需要传入ajax) |  ""   |初始化表格时，用于请求数据的ajax,需配合async参数使用|
+| async     | boolean       | false |  false   |初始化表格时,async=true,使用startUrl请求数据;async=false,使用treeTData数据.|
+| class     | string       | false |  ""   |用户可以在父级元素上添加多个class,空格隔离。组件默认提供1.table-click:点击每行数据高亮; 2.table-hover：鼠标悬浮每行数据高亮|
+| columns     | array       | true |  []   |表格头部信息|
+| callback      | object        | false |   {}    |各种事件后的回调函数|
+
+#### options.columns
+```
+    [
+        {
+            field: 'name',//列数据项字段，用于数据匹配
+            title: '名称',//列数据项名称
+            align:'left',//列数据项内容对齐方式(left,center,right)
+            width:"30%"//列数据项宽度
+        },
+        {
+            field: 'memory',
+            title: '内存使用量（GiB）',
+            align:'center',
+            width:"20%"
+        },
+        ...
+    ]
+```
+#### options.callback
+
+| 名称          | 类型           | 参数  | 描述  |
+| :-----------: |:-------------:| :-----  |:-----|
+| onClick      | function       | $this(行元素),param(后台返回的此行数据信息)     |点击数据行后的回调函数|
+| onExpand    | function       |  $this,param    |展开数据行后的回调函数|
+| onCollapse    | function       |  $this,param    |收缩数据行后的回调函数|
+
+## 对象方法
+
+| 方法名称          | 参数           | 返回值  | 描述  |
+| :-----------: |:-------------:| :-----  |:-----|
+| getSelectedParam      | function   | param(后台返回的此行数据信息)     |点击数据行后的回调函数|
+| getSelectedElem    | function    |  $this(行元素)    |展开数据行后的回调函数|
+
+    var treeTableObj=$(".treeTable").treeTableBolt(options,treeTData);
+    var param=treeTableObj.getSelectedParam();
+    var $this=treeTableObj.getSelectedElem();
 
 ## 代码地址
 使用代码时需将temvar变量相关局部代码删除，setTimeout方法中的注释代码放开,并且删除setTimeout(静态页面使用setTimeout模拟ajax效果)
