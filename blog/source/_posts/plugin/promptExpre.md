@@ -1,6 +1,6 @@
 ---
 title: input输入字段级联提示
-tags:  ["menu","plugin"]
+tags:  ["promptExpre","plugin"]
 comments: true
 toc: true
 ---

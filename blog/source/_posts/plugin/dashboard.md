@@ -1,6 +1,6 @@
 ---
 title: dashboard仪表板组件
-tags:  ["menu","plugin"]
+tags:  ["dashboard","plugin"]
 comments: true
 toc: true
 ---

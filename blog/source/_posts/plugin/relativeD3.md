@@ -1,6 +1,6 @@
 ---
 title: D3关系图组件
-tags:  ["menu","plugin"]
+tags:  ["D3","plugin"]
 comments: true
 toc: true
 ---

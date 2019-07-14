@@ -1,6 +1,6 @@
 ---
 title: zTree表格化组件
-tags:  ["menu","plugin"]
+tags:  ["zTree","plugin"]
 comments: true
 toc: true
 ---

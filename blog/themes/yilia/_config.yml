@@ -110,7 +110,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: true
+  showTags: false
 
 #是否开启访客数量统计功能
 counter: true

@@ -1,6 +1,6 @@
 ---
 title: highcharts组件
-tags:  ["menu","plugin"]
+tags:  ["highcharts","plugin"]
 comments: true
 toc: true
 ---

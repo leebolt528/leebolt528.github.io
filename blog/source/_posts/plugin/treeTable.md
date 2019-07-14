@@ -1,6 +1,6 @@
 ---
 title: treeTable扩展异步加载组件
-tags:  ["menu","plugin"]
+tags:  ["treeTable","plugin"]
 comments: true
 toc: true
 ---
