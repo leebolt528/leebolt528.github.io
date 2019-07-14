@@ -1,6 +1,6 @@
 ---
 title: 右侧滑出模态框组件
-tags:  ["menu","plugin"]
+tags:  ["sideModal","plugin"]
 comments: true
 toc: true
 ---
@@ -8,7 +8,7 @@ toc: true
 之前项目都是用的bootstrap弹出模态框，UI设计之后模态框都要从右侧滑出，所以这么频繁使用到的东西还时封装一下比较好,一劳永逸嘛，使用和维护都方便。
 <!-- more -->
 # 组件
-左侧三级菜单jQuery.plugins.menuLeft-boltNew
+右侧滑出模态框jQuery.plugins.sideModal-bolt
 # 组件效果展示
 <video id="video" controls="controls"   preload="preload" poster="\img\public\head.jpg">
     <source id="mp4" src="\video\plugin\Video_sideModal.mp4" type="video/mp4">
