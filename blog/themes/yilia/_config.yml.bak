@@ -7,10 +7,10 @@ menu:
 # SubNav
 subnav:
   github: "https://github.com/leebolt528"
-  #weibo: "#"
+  weibo: "https://weibo.com/5120362415/profile?rightmod=1&wvr=6&mod=personinfo"
   rss: /atom.xml
   #zhihu: "#"
-  qq: "http://wpa.qq.com/msgrd?v=3&uin=1277619140&site=qq&menu=yes"
+  #qq: "http://wpa.qq.com/msgrd?v=3&uin=1277619140&site=qq&menu=yes"
   #weixin: "#"
   #jianshu: "#"
   #douban: "#"
@@ -110,7 +110,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: true
+  showTags: false
 
 #是否开启访客数量统计功能
 counter: true

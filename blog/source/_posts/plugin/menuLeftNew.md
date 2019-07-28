@@ -53,57 +53,49 @@ toc: true
 #### 数据格式
 
     var menuLeftData=[
-        {"id":"1","name":"时间选择","class":"menu-log-search","href":"selectTime.html","secUrl":"","param":{"aa":"11"},"children":[]},
-        {"id":"2","name":"规则链库","class":"menu-log-perspect","href":"#","secUrl":"","param":{"aa":"11"},"children":[
-            {"id":"2-1","name":"规则链库1","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
-            {"id":"2-2","name":"规则链库2","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
-            ...
-        ]},
-        {"id":"3","name":"设备管理","class":"menu-log-meter","href":"#","secUrl":"","param":{"aa":"11"},"children":[
-            {"id":"3-1","name":"设备管理1","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[
-                {"id":"3-1-1","name":"设备管理1-1","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
+        {"name":"时间选择","class":"menu-log-search","href":"selectTime.html","secUrl":""},
+        {"name":"raphael编排","class":"menu-log-data","children":[
+            {"name":"二级菜单1","href":"index.html","secUrl":""},
+            {"name":"二级菜单2","children":[
+                {"name":"三级菜单1","href":"index.html","secUrl":""},
+                {"name":"三级菜单2","href":"index.html","secUrl":""},
                 ...
             ]},
-            {"id":"3-2","name":"设备管理2","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
-            {"id":"3-3","name":"设备管理3","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
-            {"id":"3-4","name":"设备管理4","class":"","href":"#","secUrl":"","param":{"aa":"11"},"children":[]},
             ...
         ]},
-        ...
     ]
 
 
 | 参数     | 类型       | 描述    |
 | :------: |:---------:| :-----  |
-| id       | string    | 每项菜单项的唯一标识  |
 | name     | string    | 菜单项的名称   |
-| fa       | string    | 菜单项名称前显示的awesome图标   |
 | class       | string    | 菜单项名称前显示的图标,在css文件中定义图片引用   |
 | secUrl     | string    | secUrl.length>0时，项目需要在可点击的菜单项外层包裹的sec标签控制权限，<sec:authorize  url=secUrl></sec:authorize>    |
 | param     | string    | 绑定的对象参数，可以在回调函数的点击事件中获取使用    |
 | children | array     | 该菜单下的子菜单    |
 
->去除参数"fa"  新增参数"class","secUrl","param"
+>去除参数"fa","id"    
+新增参数"class","secUrl","param"
 
 ### 2.options
 options可不传将使用内置默认(object)。
 
 | 名称          | 类型           | 默认值  | 描述  |
 | :-----------: |:-------------:| :-----  |:-----|
-| selected      | string        | null  |表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值|
 | menuOpen      | boolean       |  true   |菜单初始化是否展开|
 | hideFloat     | boolean       |  true   |点击向右浮出的菜单项,悬浮的菜单框是否消失|
 | shrink      | number       |  0   |分别为三种模式：0-独立框架伸缩菜单 1-集成框架伸缩菜单 2-独立框架无伸缩菜单|
 | title      | object       |  {}   |导航头部信息|
 | callback      | object        |   {}    |各种事件后的回调函数|
 
->新增参数"shrink","title"
+>去除"selected"  使用数据项href进行高亮显示   
+新增参数"shrink","title"
 
 options.title。
 
 | 名称          | 类型           | 默认值  | 描述  |
 | :-----------: |:-------------:| :-----  |:-----|
-| enabled      | boolean        | false  |是否显示头部信息|
+| enabled      | boolean        | true  |是否显示头部信息|
 | class      | string       |  ""   |头部图标|
 | content      | string       |  ""   |头部标题|
 
@@ -121,7 +113,18 @@ options.title。
 
 | 名称          | 参数           | 返回值  | 描述  |
 | :-----------: |:-------------:| :-----  |:-----|
-| updateTitle   | title(options.title)    | 无 | 用于修改头部标题|
+| updateTitle   | options.title    | 无 | 用于修改头部标题|
+| onClick    | function($this,param){}    | 无 | options.callback.onClick|
+| onExpand   | function(shrink){}    | 无 | options.callback.onExpand|
+| onExpand   | function(shrink){}    | 无 | options.callback.onExpand|
+
+>新增onClick onExpand和onExpand对象方法 相当与扩展menuLeft回调函数可以通过对象引用，内部与callBack合并函数一起执行,执行顺序在callBack之后。
+
+## 注意事项
+>1:内部使用cookie记录options.menuOpen并且展示    
+2：jQuery.plugins.menuLeft-boltNew.css中的.blogic-content(自定义)  
+&nbsp;&nbsp;&nbsp;&nbsp;$(".blogic-content")为和menuLeft平级的右侧容器    
+&nbsp;&nbsp;&nbsp;&nbsp;如果$(".blogic-content")使用定位来适应左侧菜单的收缩,则此css将会生效，不需要使用外部回调函数处理
 
 ## 代码地址
 >https://github.com/leebolt528/blogic-plugins.git

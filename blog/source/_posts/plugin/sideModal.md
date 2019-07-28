@@ -24,6 +24,7 @@ toc: true
     <script type='text/javascript' src='../js/plugins/jQuery.plugins.sideModal-bolt.js'></script>
 
 ## 方法
+>在页面加载开始执行$.sideModalFun(),否则页面首次弹出侧边栏无过渡效果
 
 在点击事件中直接通过JavaScript调用组件:
 
