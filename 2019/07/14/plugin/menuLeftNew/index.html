@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="LeeBolt的博客">
 <meta property="og:description" content="前言前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-14T14:30:08.810Z">
+<meta property="og:updated_time" content="2019-07-28T14:23:57.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="左侧三级导航菜单组件（升级版本）">
 <meta name="twitter:description" content="前言前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。">
@@ -103,9 +103,7 @@ var _hmt = _hmt || [];
 				
 					<a class="github" target="_blank" href="https://github.com/leebolt528" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1277619140&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/5120362415/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:leebolt528@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -146,9 +144,7 @@ var _hmt = _hmt || [];
 					
 						<a class="github" target="_blank" href="https://github.com/leebolt528" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1277619140&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/5120362415/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:leebolt528@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -203,7 +199,7 @@ var _hmt = _hmt || [];
 		<div id="toc-article" class="toc-article">
 		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">4.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.6.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
 		 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -248,23 +244,16 @@ var _hmt = _hmt || [];
 <pre><code>$(&quot;.menuLeft&quot;).menuLeftBolt([options],menuLeftData);
 </code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="1-menuLeftData"><a href="#1-menuLeftData" class="headerlink" title="1.menuLeftData"></a>1.menuLeftData</h3><p>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</p>
 <h4 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h4><pre><code>var menuLeftData=[
-    {&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;时间选择&quot;,&quot;class&quot;:&quot;menu-log-search&quot;,&quot;href&quot;:&quot;selectTime.html&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
-    {&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;规则链库&quot;,&quot;class&quot;:&quot;menu-log-perspect&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[
-        {&quot;id&quot;:&quot;2-1&quot;,&quot;name&quot;:&quot;规则链库1&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;2-2&quot;,&quot;name&quot;:&quot;规则链库2&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
-        ...
-    ]},
-    {&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;设备管理&quot;,&quot;class&quot;:&quot;menu-log-meter&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[
-        {&quot;id&quot;:&quot;3-1&quot;,&quot;name&quot;:&quot;设备管理1&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[
-            {&quot;id&quot;:&quot;3-1-1&quot;,&quot;name&quot;:&quot;设备管理1-1&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
+    {&quot;name&quot;:&quot;时间选择&quot;,&quot;class&quot;:&quot;menu-log-search&quot;,&quot;href&quot;:&quot;selectTime.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+    {&quot;name&quot;:&quot;raphael编排&quot;,&quot;class&quot;:&quot;menu-log-data&quot;,&quot;children&quot;:[
+        {&quot;name&quot;:&quot;二级菜单1&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+        {&quot;name&quot;:&quot;二级菜单2&quot;,&quot;children&quot;:[
+            {&quot;name&quot;:&quot;三级菜单1&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+            {&quot;name&quot;:&quot;三级菜单2&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
             ...
         ]},
-        {&quot;id&quot;:&quot;3-2&quot;,&quot;name&quot;:&quot;设备管理2&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;3-3&quot;,&quot;name&quot;:&quot;设备管理3&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
-        {&quot;id&quot;:&quot;3-4&quot;,&quot;name&quot;:&quot;设备管理4&quot;,&quot;class&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;secUrl&quot;:&quot;&quot;,&quot;param&quot;:{&quot;aa&quot;:&quot;11&quot;},&quot;children&quot;:[]},
         ...
     ]},
-    ...
 ]
 </code></pre><table>
 <thead>
@@ -276,19 +265,9 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">id</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">每项菜单项的唯一标识</td>
-</tr>
-<tr>
 <td style="text-align:center">name</td>
 <td style="text-align:center">string</td>
 <td style="text-align:left">菜单项的名称</td>
-</tr>
-<tr>
-<td style="text-align:center">fa</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">菜单项名称前显示的awesome图标</td>
 </tr>
 <tr>
 <td style="text-align:center">class</td>
@@ -313,7 +292,7 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <blockquote>
-<p>去除参数”fa”  新增参数”class”,”secUrl”,”param”</p>
+<p>去除参数”fa”,”id”<br>新增参数”class”,”secUrl”,”param”</p>
 </blockquote>
 <h3 id="2-options"><a href="#2-options" class="headerlink" title="2.options"></a>2.options</h3><p>options可不传将使用内置默认(object)。</p>
 <table>
@@ -326,12 +305,6 @@ var _hmt = _hmt || [];
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">selected</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">null</td>
-<td style="text-align:left">表示当前所在页,用于左侧菜单高亮,值为菜单项数据标识ID值</td>
-</tr>
 <tr>
 <td style="text-align:center">menuOpen</td>
 <td style="text-align:center">boolean</td>
@@ -365,7 +338,7 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <blockquote>
-<p>新增参数”shrink”,”title”</p>
+<p>去除”selected”  使用数据项href进行高亮显示<br>新增参数”shrink”,”title”</p>
 </blockquote>
 <p>options.title。</p>
 <table>
@@ -381,7 +354,7 @@ var _hmt = _hmt || [];
 <tr>
 <td style="text-align:center">enabled</td>
 <td style="text-align:center">boolean</td>
-<td style="text-align:left">false</td>
+<td style="text-align:left">true</td>
 <td style="text-align:left">是否显示头部信息</td>
 </tr>
 <tr>
@@ -443,12 +416,36 @@ var _hmt = _hmt || [];
 <tbody>
 <tr>
 <td style="text-align:center">updateTitle</td>
-<td style="text-align:center">title(options.title)</td>
+<td style="text-align:center">options.title</td>
 <td style="text-align:left">无</td>
 <td style="text-align:left">用于修改头部标题</td>
 </tr>
+<tr>
+<td style="text-align:center">onClick</td>
+<td style="text-align:center">function($this,param){}</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">options.callback.onClick</td>
+</tr>
+<tr>
+<td style="text-align:center">onExpand</td>
+<td style="text-align:center">function(shrink){}</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">options.callback.onExpand</td>
+</tr>
+<tr>
+<td style="text-align:center">onExpand</td>
+<td style="text-align:center">function(shrink){}</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">options.callback.onExpand</td>
+</tr>
 </tbody>
 </table>
+<blockquote>
+<p>新增onClick onExpand和onExpand对象方法 相当与扩展menuLeft回调函数可以通过对象引用，内部与callBack合并函数一起执行,执行顺序在callBack之后。</p>
+</blockquote>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><blockquote>
+<p>1:内部使用cookie记录options.menuOpen并且展示<br>2：jQuery.plugins.menuLeft-boltNew.css中的.blogic-content(自定义)<br>&nbsp;&nbsp;&nbsp;&nbsp;$(“.blogic-content”)为和menuLeft平级的右侧容器<br>&nbsp;&nbsp;&nbsp;&nbsp;如果$(“.blogic-content”)使用定位来适应左侧菜单的收缩,则此css将会生效，不需要使用外部回调函数处理</p>
+</blockquote>
 <h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
 <p><a href="https://github.com/leebolt528/blogic-plugins.git" target="_blank" rel="noopener">https://github.com/leebolt528/blogic-plugins.git</a></p>
 </blockquote>
@@ -608,7 +605,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">4.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.6.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -729,19 +726,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">dashboard</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">plugin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
