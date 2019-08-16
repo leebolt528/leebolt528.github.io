@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cczeng.github.io">
-  <title>右侧滑出模态框组件 | LeeBolt的博客</title>
+  <title>左侧三级导航菜单组件（升级版本） | LeeBolt的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言之前项目都是用的bootstrap弹出模态框，UI设计之后模态框都要从右侧滑出，所以这么频繁使用到的东西还时封装一下比较好,一劳永逸嘛，使用和维护都方便。">
-<meta name="keywords" content="plugin,sideModal">
+  <meta name="description" content="前言前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。">
+<meta name="keywords" content="menu,plugin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="右侧滑出模态框组件">
-<meta property="og:url" content="https://cczeng.github.io/2019/07/14/plugin/sideModal/index.html">
+<meta property="og:title" content="左侧三级导航菜单组件（升级版本）">
+<meta property="og:url" content="https://cczeng.github.io/2019/07/28/plugin/menuLeftNew/index.html">
 <meta property="og:site_name" content="LeeBolt的博客">
-<meta property="og:description" content="前言之前项目都是用的bootstrap弹出模态框，UI设计之后模态框都要从右侧滑出，所以这么频繁使用到的东西还时封装一下比较好,一劳永逸嘛，使用和维护都方便。">
+<meta property="og:description" content="前言前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T13:40:36.755Z">
+<meta property="og:updated_time" content="2019-07-28T15:11:03.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="右侧滑出模态框组件">
-<meta name="twitter:description" content="前言之前项目都是用的bootstrap弹出模态框，UI设计之后模态框都要从右侧滑出，所以这么频繁使用到的东西还时封装一下比较好,一劳永逸嘛，使用和维护都方便。">
+<meta name="twitter:title" content="左侧三级导航菜单组件（升级版本）">
+<meta name="twitter:description" content="前言前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。">
   
   
     <link rel="icon" href="/img/public/favicon.ico">
@@ -172,20 +172,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-plugin/sideModal" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-plugin/menuLeftNew" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      右侧滑出模态框组件
+      左侧三级导航菜单组件（升级版本）
     </h1>
   
 
         
-        <a href="/2019/07/14/plugin/sideModal/" class="archive-article-date">
-  	<time datetime="2019-07-14T15:29:10.139Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-14</time>
+        <a href="/2019/07/28/plugin/menuLeftNew/" class="archive-article-date">
+  	<time datetime="2019-07-28T15:11:03.950Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
 </a>
         
       </header>
@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
 		<div id="toc-article" class="toc-article">
 		    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#options"><span class="toc-number">4.3.1.</span> <span class="toc-text">options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+		   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">4.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.6.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
 		 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -219,19 +219,82 @@ var _hmt = _hmt || [];
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前项目都是用的bootstrap弹出模态框，UI设计之后模态框都要从右侧滑出，所以这么频繁使用到的东西还时封装一下比较好,一劳永逸嘛，使用和维护都方便。<br><a id="more"></a></p>
-<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>右侧滑出模态框jQuery.plugins.sideModal-bolt</p>
-<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><p><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_sideModal.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间项目重构，于是我之前封装的左侧三级菜单派上了用场。由于前端页面有UI的设计，样式方面做了改动；在使用中功能上肯定也避免不了一定的升级优化。<br><a id="more"></a></p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>左侧三级菜单jQuery.plugins.menuLeft-boltNew</p>
+<h1 id="组件效果展示"><a href="#组件效果展示" class="headerlink" title="组件效果展示"></a>组件效果展示</h1><video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_menuLeftShrink0.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video>
+
+<blockquote>
+<p>option.shrink=0<br>页面的独立框架使用的菜单模式。    </p>
+</blockquote>
+<video id="video" controls="controls" preload="preload" poster="\img\public\head.jpg"><br>    <source id="mp4" src="\video\plugin\Video_menuLeftShrink1.mp4" type="video/mp4"><br>    <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>    <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg"><br></video>
+
+<blockquote>
+<p>option.mode=1<br>页面的集成框架使用的菜单模式。</p>
+</blockquote>
 <h1 id="组件使用说明"><a href="#组件使用说明" class="headerlink" title="组件使用说明"></a>组件使用说明</h1><h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/common/commonBolt.css&quot;&gt;(组件公共样式)
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/plugins/jQuery.plugins.menuLeft-boltNew.css&quot;&gt;
 
 &lt;script type=&apos;text/javascript&apos; src=&apos;../js/common/jquery/jquery.min.js&apos;&gt;&lt;/script&gt;
-&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.sideModal-bolt.js&apos;&gt;&lt;/script&gt;
-</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote>
-<p>在页面加载开始执行$.sideModalFun(),否则页面首次弹出侧边栏无过渡效果</p>
+&lt;script type=&apos;text/javascript&apos; src=&apos;../js/plugins/jQuery.plugins.menuLeft-boltNew.js&apos;&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<p>去除font-awesome.min.css的引用，在数据项中使用class引入图片</p>
 </blockquote>
-<p>在点击事件中直接通过JavaScript调用组件:</p>
-<pre><code>$.sideModalFun(options)
-</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="options"><a href="#options" class="headerlink" title="options"></a>options</h3><p>options可不传将使用内置默认(object为空)。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><pre><code>&lt;div class=&quot;menuLeft&quot;&gt;&lt;/div&gt;自定义class=&quot;menuLeft&quot;用于方法调用
+</code></pre><p>通过JavaScript调用菜单组件:</p>
+<pre><code>$(&quot;.menuLeft&quot;).menuLeftBolt([options],menuLeftData);
+</code></pre><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="1-menuLeftData"><a href="#1-menuLeftData" class="headerlink" title="1.menuLeftData"></a>1.menuLeftData</h3><p>可以是制定格式的数据,亦可以是返回指定格式数据的Function,function中返回数据需要ajax请求结束后，可能需要使用同步请求方式(array/function).</p>
+<h4 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h4><pre><code>var menuLeftData=[
+    {&quot;name&quot;:&quot;时间选择&quot;,&quot;class&quot;:&quot;menu-log-search&quot;,&quot;href&quot;:&quot;selectTime.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+    {&quot;name&quot;:&quot;raphael编排&quot;,&quot;class&quot;:&quot;menu-log-data&quot;,&quot;children&quot;:[
+        {&quot;name&quot;:&quot;二级菜单1&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+        {&quot;name&quot;:&quot;二级菜单2&quot;,&quot;children&quot;:[
+            {&quot;name&quot;:&quot;三级菜单1&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+            {&quot;name&quot;:&quot;三级菜单2&quot;,&quot;href&quot;:&quot;index.html&quot;,&quot;secUrl&quot;:&quot;&quot;},
+            ...
+        ]},
+        ...
+    ]},
+]
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">菜单项的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">class</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">菜单项名称前显示的图标,在css文件中定义图片引用</td>
+</tr>
+<tr>
+<td style="text-align:center">secUrl</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">secUrl.length&gt;0时，项目需要在可点击的菜单项外层包裹的sec标签控制权限，&lt;sec:authorize  url=secUrl&gt;&lt;/sec:authorize&gt;</td>
+</tr>
+<tr>
+<td style="text-align:center">param</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">绑定的对象参数，可以在回调函数的点击事件中获取使用</td>
+</tr>
+<tr>
+<td style="text-align:center">children</td>
+<td style="text-align:center">array</td>
+<td style="text-align:left">该菜单下的子菜单</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>去除参数”fa”,”id”<br>新增参数”class”,”secUrl”,”param”</p>
+</blockquote>
+<h3 id="2-options"><a href="#2-options" class="headerlink" title="2.options"></a>2.options</h3><p>options可不传将使用内置默认(object)。</p>
 <table>
 <thead>
 <tr>
@@ -243,34 +306,68 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">headText</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">“”</td>
-<td style="text-align:left">头部文本</td>
-</tr>
-<tr>
-<td style="text-align:center">btnSwitch</td>
+<td style="text-align:center">menuOpen</td>
 <td style="text-align:center">boolean</td>
 <td style="text-align:left">true</td>
-<td style="text-align:left">是否添加按钮</td>
+<td style="text-align:left">菜单初始化是否展开</td>
 </tr>
 <tr>
-<td style="text-align:center">classList</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">“”</td>
-<td style="text-align:left">自定义的class,多个空格分开，默认designer_detail</td>
+<td style="text-align:center">hideFloat</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">点击向右浮出的菜单项,悬浮的菜单框是否消失</td>
 </tr>
 <tr>
-<td style="text-align:center">imgPath</td>
-<td style="text-align:center">string</td>
-<td style="text-align:left">“”</td>
-<td style="text-align:left">关闭和加载图标的路径前缀</td>
+<td style="text-align:center">shrink</td>
+<td style="text-align:center">number</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">分别为三种模式：0-独立框架伸缩菜单 1-集成框架伸缩菜单 2-独立框架无伸缩菜单</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">object</td>
+<td style="text-align:left">{}</td>
+<td style="text-align:left">导航头部信息</td>
 </tr>
 <tr>
 <td style="text-align:center">callback</td>
 <td style="text-align:center">object</td>
 <td style="text-align:left">{}</td>
 <td style="text-align:left">各种事件后的回调函数</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>去除”selected”  使用数据项href进行高亮显示<br>新增参数”shrink”,”title”</p>
+</blockquote>
+<p>options.title。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">默认值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">enabled</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">是否显示头部信息</td>
+</tr>
+<tr>
+<td style="text-align:center">class</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">“”</td>
+<td style="text-align:left">头部图标</td>
+</tr>
+<tr>
+<td style="text-align:center">content</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">“”</td>
+<td style="text-align:left">头部标题</td>
 </tr>
 </tbody>
 </table>
@@ -285,27 +382,27 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">clickConfirm</td>
+<td style="text-align:center">onClick</td>
 <td style="text-align:center">function</td>
-<td style="text-align:left">$rightModel</td>
-<td style="text-align:left">点击确认按钮后的回调函数</td>
+<td style="text-align:left">$this,param</td>
+<td style="text-align:left">点击选中菜单后的回调函数。$this:当前点击的元素;param:数据里传入的param对象,用于获取跳转页面需要的信息</td>
 </tr>
 <tr>
-<td style="text-align:center">clickCancel</td>
+<td style="text-align:center">onExpand</td>
 <td style="text-align:center">function</td>
-<td style="text-align:left">$rightModel</td>
-<td style="text-align:left">点击取消，关闭按钮后的回调函数，默认消失</td>
+<td style="text-align:left">shrink</td>
+<td style="text-align:left">点击展开菜单后的回调函数。shrink:options.shrink值,用于页面布局调整</td>
 </tr>
 <tr>
-<td style="text-align:center">clickMask</td>
+<td style="text-align:center">onCollapse</td>
 <td style="text-align:center">function</td>
-<td style="text-align:left">$rightModel</td>
-<td style="text-align:left">点击阴影后的回调函数，默认消失</td>
+<td style="text-align:left">shrink</td>
+<td style="text-align:left">点击收起菜单后的回调函数。shrink:options.shrink值,用于页面布局调整</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>$rightModel是返回的右侧模态框。</p>
+<p>增加onClick回调，onExpand和onCollapse添加返回参数。</p>
 </blockquote>
 <h2 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h2><table>
 <thead>
@@ -318,31 +415,37 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">showSideModal</td>
-<td style="text-align:center">无</td>
+<td style="text-align:center">updateTitle</td>
+<td style="text-align:center">options.title</td>
 <td style="text-align:left">无</td>
-<td style="text-align:left">右侧模态框和阴影出现</td>
+<td style="text-align:left">用于修改头部标题</td>
 </tr>
 <tr>
-<td style="text-align:center">hideSideModal</td>
-<td style="text-align:center">无</td>
+<td style="text-align:center">onClick</td>
+<td style="text-align:center">function($this,param){}</td>
 <td style="text-align:left">无</td>
-<td style="text-align:left">右侧模态框和阴影消失</td>
+<td style="text-align:left">options.callback.onClick</td>
 </tr>
 <tr>
-<td style="text-align:center">addHtml</td>
-<td style="text-align:center">需要添加的文本</td>
+<td style="text-align:center">onExpand</td>
+<td style="text-align:center">function(shrink){}</td>
 <td style="text-align:left">无</td>
-<td style="text-align:left">添加除头部和底部按钮的内容</td>
+<td style="text-align:left">options.callback.onExpand</td>
 </tr>
 <tr>
-<td style="text-align:center">getPaDom</td>
-<td style="text-align:center">无</td>
+<td style="text-align:center">onExpand</td>
+<td style="text-align:center">function(shrink){}</td>
 <td style="text-align:left">无</td>
-<td style="text-align:left">获取右侧模态框元素</td>
+<td style="text-align:left">options.callback.onExpand</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>新增onClick onExpand和onExpand对象方法 相当与扩展menuLeft回调函数可以通过对象引用，内部与callBack合并函数一起执行,执行顺序在callBack之后。</p>
+</blockquote>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><blockquote>
+<p>1:内部使用cookie记录options.menuOpen并且展示<br>2：jQuery.plugins.menuLeft-boltNew.css中的.blogic-content(自定义)<br>&nbsp;&nbsp;&nbsp;&nbsp;$(“.blogic-content”)为和menuLeft平级的右侧容器<br>&nbsp;&nbsp;&nbsp;&nbsp;如果$(“.blogic-content”)使用定位来适应左侧菜单的收缩,则此css将会生效，不需要使用外部回调函数处理</p>
+</blockquote>
 <h2 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h2><blockquote>
 <p><a href="https://github.com/leebolt528/blogic-plugins.git" target="_blank" rel="noopener">https://github.com/leebolt528/blogic-plugins.git</a></p>
 </blockquote>
@@ -390,11 +493,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">plugin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">menu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sideModal</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">plugin</a>
         		</li>
       		
 		</ul>
@@ -450,7 +553,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/07/14/plugin/sideModal/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cczeng.github.io/2019/07/28/plugin/menuLeftNew/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -463,6 +566,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/28/plugin/sideModal/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          右侧滑出模态框组件
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/14/plugin/raphael/" id="article-nav-older" class="article-nav-link-wrap">
@@ -493,7 +605,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#options"><span class="toc-number">4.3.1.</span> <span class="toc-text">options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.5.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件效果展示"><span class="toc-number">3.</span> <span class="toc-text">组件效果展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件使用说明"><span class="toc-number">4.</span> <span class="toc-text">组件使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用环境"><span class="toc-number">4.1.</span> <span class="toc-text">使用环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">4.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-number">4.3.</span> <span class="toc-text">参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-menuLeftData"><span class="toc-number">4.3.1.</span> <span class="toc-text">1.menuLeftData</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据格式"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-options"><span class="toc-number">4.3.2.</span> <span class="toc-text">2.options</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#options-callback"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">options.callback</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象方法"><span class="toc-number">4.4.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">4.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码地址"><span class="toc-number">4.6.</span> <span class="toc-text">代码地址</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -614,7 +726,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">dashboard</a>
+                <a href="javascript:void(0)" class="js-tag color5">menu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,31 +734,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">menu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">promptExpre</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">raphael</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">D3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sideModal</a>
+                <a href="javascript:void(0)" class="js-tag color5">dashboard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -655,6 +747,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">zTree</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">raphael</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sideModal</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">D3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
