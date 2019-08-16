@@ -269,6 +269,9 @@ options,非必传项(object)。
                 dialRearLength:"15%"//指针长度
             },
             gauge:{//带指针仪表盘特殊样式
+                startAngle:-135,
+                endAngle:135,
+                center:['50%', '50%'],
                 labelY:-10,//中心文字Y坐标
                 dialColor:"#0f0f0f",//指针颜色
                 dialSize:4//指针粗细
