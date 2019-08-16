@@ -192,7 +192,7 @@ options,非必传项(object)。
                 fontWeight: "bold"
             },
             dataLabels: {//数据标签样式
-                enabled: true,//(双环图内部默认false不可配置)
+                enabled: false,//(双环图内部默认false不可配置)
                 color: "contrast",
                 fontSize: "11px",
                 fontWeight: "bold",
@@ -225,8 +225,8 @@ options,非必传项(object)。
             colorRule:['#38ae33','#ef8f40','#f64a4a',"#e6e6e6","#f4a6c4"],//双环图和仪表盘图颜色(前三个刻度等级颜色，第四个面板背景色，第五个刻度背景色)
             size:'100%',//扇形图，环图，仪表盘图大小
             ring:{//环形图特殊样式(饼图和仪表盘)
-                startAngle:-135,//起始角度
-                endAngle:135,//终止角度
+                startAngle:0,//-135起始角度
+                endAngle:360,//135终止角度
                 center:['50%', '50%']//图中心位置
             },
             pieRing:{//环形饼图特殊样式
