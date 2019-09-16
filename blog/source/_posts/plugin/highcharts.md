@@ -178,7 +178,8 @@ options,非必传项(object)。
                 color:'#000',
                 navEnabled:true,
                 navHeight:40,
-                y:0
+                y:0,
+                right:false//图列是否向右展示
             },
             labels: {//刻度名称样式
                 color: "#666666", 
