@@ -69,7 +69,7 @@ hightcharts组件jQuery.plugins.hightcharts-bolt
         {
             "label":{//非第一组数据label下只需要设置seriesReg字段，其余共用第一组数据的label设置。
                 "seriesReg":"{{monitor_host}}:{{job}}",//数据项名称规则，使用{{}}包含result里的seriesAttr的属性名称以获取值。因为数据项名称有时后台不可以直接返回，需要拼接
-                "yAxisUnit":"容量-s",//y轴名称和单位，名称和单位为空时，值为"-".
+                "yAxisUnit":"容量-s",//y轴名称和单位，名称和单位为空时，值为"-".当type="columnchartpercent"||type="barchartpercent"时,可以每组数据对应使用自己的单位,值为："容量-单位1-单位2-..."
                 "xAxisUnit":"-",//X轴名称和单位(单位如KiB,KiB/s/s)
                 "zAxisUnit":"-",//X轴名称和单位,散点图和气泡图会用到.
                 "xAxisType":"dataTime",//X轴数据类型(时间类型为“dataTime”,数值类型为“number”(数值可以加引号但属于number类型)),字符串类型为“string”;饼图和双环图值不使用字段，值随意)
@@ -174,12 +174,13 @@ options,非必传项(object)。
             legend:{//图例说明样式
                 enabled:true,
                 fontWeight:"normal",
-                fontSize:"12px",
-                color:'#000',
+                fontSize:"14px",
+                color:'#999',
                 navEnabled:true,
-                navHeight:40,
+                navHeight:44,
                 y:0,
                 right:false//图列是否向右展示
+                symbolRadius:true//图列图标形状
             },
             labels: {//刻度名称样式
                 color: "#666666", 
@@ -206,14 +207,15 @@ options,非必传项(object)。
             tooltip: {//提示框样式
                 enabled:true,
                 shared: true,//false显示仪表盘中心文字附加行
-                color: "#333333", 
+                color: "#666", 
                 fontSize: "12px",
                 whiteSpace: "nowrap",
                 fontWeight:"normal"
             },
             xAxis:{
                 enabledTitle:true,//X轴名称是否显示
-                xTitleUnit:true//X轴单位显示位置(X轴名称后面-true,X轴刻度后面-false;)
+                xTitleUnit:true,//X轴单位显示位置(X轴名称后面-true,X轴刻度后面-false;)
+                tickLength:10
             },
             yAxis:{
                 enabledTitle:true,//Y轴名称是否显示
