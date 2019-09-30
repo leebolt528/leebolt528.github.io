@@ -165,6 +165,7 @@ options,非必传项(object)。
             lineWidth:1.7,//直线图和曲线图线的粗细
             cursor:'pointer',//光标形状(可点击-"pointer";无绑定事件-null)
             gaugeLevel:[50,30,20],//仪表盘颜色变化标准,数值大小成比例即可
+            decimal:2,//数据处理需要保留的小数点位数
             title: {//图表名称样式
                 enabled:false,
                 align: 'left',
