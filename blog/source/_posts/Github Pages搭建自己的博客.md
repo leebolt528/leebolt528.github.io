@@ -164,12 +164,12 @@ toc: true
 # 5.关于hexo搭建博客后的一些基础配置
 ***一些配置需要在blog根目录和themes/yilia下的两个_config.yml文件中在修改。***
 ## 修改主题
-1. 找到想要的主题后，下载到目录的themes下 
+1.找到想要的主题后，下载到目录的themes下 
 ```
     git clone https://github.com/wuchong/jacman.git themes/jacman
 ```
-2. 修改全局config.yml中的theme,theme:yilia 把yilia改为pacman.
-3. 然后进行主题更新以及部署(最后上传到github).
+2.修改全局config.yml中的theme,theme:yilia 把yilia改为pacman.
+3.然后进行主题更新以及部署(最后上传到github).
 ```
     cd themes/jacman
     git pull
@@ -290,3 +290,5 @@ or
     <source id="ogv" src="http://media.w3.org/2010/ 05/sintel/trailer.ogv" type="video/ogg">
 </video>
 ```
+## hexo隐藏文章
+>使用插件[hexo-hide-posts](https://github.com/prinsss/hexo-hide-posts)
