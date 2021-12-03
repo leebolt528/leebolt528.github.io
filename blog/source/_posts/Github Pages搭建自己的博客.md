@@ -161,6 +161,19 @@ toc: true
     npm install hexo-deployer-git --save #必须在hexo d之前安装这个扩展
     hexo d
 这时再刷新username.github.io就可以看到你的博客了。
+hexo generate 生成的publish中html都是空的？
+
+    nvm切换node版本
+
+hexo deploy 出现git@github.com: Permission denied (publickey)
+
+    1.git config --global --list 验证邮箱与GitHub注册时输入的是否一致
+    2.git仓库，添加秘钥
+    3.ssh -T git@github.com 测试一下通不通
+    4.不通就是
+    ssh-agent -s
+    ssh-add ~/.ssh/id_rsa 操作这两步
+
 # 5.关于hexo搭建博客后的一些基础配置
 ***一些配置需要在blog根目录和themes/yilia下的两个_config.yml文件中在修改。***
 ## 修改主题
